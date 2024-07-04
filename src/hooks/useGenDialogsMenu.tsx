@@ -1,7 +1,8 @@
-import React, { JSXElementConstructor, ReactElement } from "react";
+import React, { JSXElementConstructor } from "react";
 import { ReactNode, useState } from "react";
 import { cn } from "@/lib/utils";
 type DialogContents = { [key: string]: React.ReactNode };
+//eslint-disable-next-line
 type DialogIcons = { [key in keyof DialogContents]: React.ReactNode };
 const useGenDialogsMenu = (
   contents: DialogContents,
@@ -11,6 +12,7 @@ const useGenDialogsMenu = (
         onClick: () => void;
         children: ReactNode;
       }>
+    //eslint-disable-next-line
     | keyof HTMLElementTagNameMap,
   options:
     | {
