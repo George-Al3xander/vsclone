@@ -1,5 +1,14 @@
 import { atom } from "recoil";
 import { TMobileTab, TOutputPosition } from "@/types/types";
+import { recoilPersist } from "recoil-persist";
+
+const localStorage =
+  typeof window !== "undefined" ? window.localStorage : undefined;
+
+const { persistAtom } = recoilPersist({
+  key: "recoil-persist",
+  storage: localStorage,
+});
 
 export const $outputPosition = atom<TOutputPosition | string>({
   key: "output-position",
@@ -7,7 +16,7 @@ export const $outputPosition = atom<TOutputPosition | string>({
 });
 
 export const $outputVisibility = atom<boolean>({
-  key: "output-Visibility",
+  key: "output-visibility",
   default: true,
 });
 
@@ -17,26 +26,27 @@ export const $output = atom<string | undefined>({
 });
 
 export const $intelliSenseStatus = atom<boolean>({
-  key: "IntelliSenseAtom",
+  key: "$intelli-sense-status",
   default: true,
 });
 
 export const $currentCode = atom<undefined | string>({
-  key: "curr_code",
+  key: "current-code",
   default: undefined,
+  effects_UNSTABLE: [persistAtom],
 });
 
 export const $isLoading = atom({
-  key: "isLoading_boolean",
+  key: "loading-status",
   default: false,
 });
 
 export const $mobileTab = atom<TMobileTab>({
-  key: "mobile_tabs",
+  key: "mobile-tabs",
   default: "editor",
 });
 
 export const $tabSwitchStatus = atom<boolean>({
-  key: "tab_switch_status",
+  key: "tab-switch-status",
   default: true,
 });
