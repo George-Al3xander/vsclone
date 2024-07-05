@@ -13,7 +13,7 @@ function Output() {
   return (
     <div
       className={cn(
-        "relative -z-10 h-[calc(100vh-10rem)] w-full p-4 sm:h-[20vh]",
+        "relative z-[1] h-[calc(100vh-10rem)] w-full p-4 sm:h-[20vh]",
         roundedGlassStyle,
         {
           "sm:h-full sm:w-1/3": !isVertical,

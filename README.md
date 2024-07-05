@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VSClone
+![General preview ](/public/assets/img/readme/desktop_preview.png)
 
-## Getting Started
+## Overview
+This project is a web-based code editor that supports multiple programming languages and includes features like code compilation, file import/export, terminal management, and more. Built using Next.js, TypeScript, Tailwind, shadcn, and Recoil, this editor provides a versatile and responsive coding environment.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js**: A React framework for server-rendered applications.
+- **TypeScript**: A typed superset of JavaScript.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **shadcn**: A UI library for React components.
+- **Recoil**: A state management library for React.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Supported Languages**: The editor supports the following languages:
+    - JavaScript
+    - TypeScript
+    - Python
+    - Java
+    - C#
+    - PHP
+    - C++
+- **Code Compilation**: Compile code in the supported languages directly in the editor.
+- **File Import/Export**: Easily import and export files for coding and project management.
+- **Terminal Management**: Hide, show, and reposition the output terminal as needed.
+- **Responsive Design**: Optimized for both desktop and mobile layouts.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Mobile Layout
 
-## Learn More
+The web code editor is fully responsive and designed to work seamlessly on mobile devices. The mobile layout includes:
+- **Compact Editor**: A streamlined interface for editing code on smaller screens.
+- **Collapsible Menus**: Menus and options that can be collapsed to maximize screen space for coding.
+- **Switchable Tabs**: Users can switch between the editor and output tabs for better usability on mobile devices.
 
-To learn more about Next.js, take a look at the following resources:
+### Mobile Layout Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<div style="display: flex; flex-direction: row; gap: 1rem; justify-content: space-between; flex-wrap: wrap">
+  <div>
+    <img src="/public/assets/img/readme/mobile_preview_editor.png" width="250" alt="Mobile Preview - Editor" />
+    <p style="text-align: center;">Mobile Preview - Editor</p>
+  </div>
+  <div>
+    <img src="/public/assets/img/readme/mobile_preview_output.png" width="250" alt="Mobile Preview - Output" />
+    <p style="text-align: center;">Mobile Preview - Output</p>
+  </div>
+  <div>
+    <img src="/public/assets/img/readme/mobile_preview_menu_settings.png" width="250" alt="Mobile Preview - Menu Settings" />
+    <p style="text-align: center;">Mobile Preview - Menu Settings</p>
+  </div>
+  <div>
+    <img src="/public/assets/img/readme/mobile_preview_menu_language_selection.png" width="250" alt="Mobile Preview - Menu Language Selection" />
+    <p style="text-align: center;">Mobile Preview - Language Selection Menu </p>
+  </div>
+</div>
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
