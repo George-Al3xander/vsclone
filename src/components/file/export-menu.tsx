@@ -11,8 +11,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import useGetCurrLang from "@/hooks/useGetCurrLang";
-import { LANGUAGE_FILE_EXTENSIONS } from "@/constants/consts";
+import useGetCurrLang from "@/hooks/use-get-curr-lang";
+import { LANGUAGE_FILE_EXTENSIONS, CODE_SNIPPETS } from "@/constants/consts";
 import { useRecoilValue } from "recoil";
 import { $currentCode } from "@/state/atoms/atoms";
 
@@ -46,7 +46,13 @@ function ExportMenu() {
       <DialogFooter>
         <DialogClose asChild>
           <Button
-            onClick={() => exportCode({ code, fileName, language })}
+            onClick={() =>
+              exportCode({
+                code: code ?? CODE_SNIPPETS[language],
+                fileName,
+                language,
+              })
+            }
             className={"capitalize"}
             type="submit"
           >

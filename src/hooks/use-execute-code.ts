@@ -7,7 +7,7 @@ import {
   $output,
   $tabSwitchStatus,
 } from "@/state/atoms/atoms";
-import useGetCurrLang from "@/hooks/useGetCurrLang";
+import useGetCurrLang from "@/hooks/use-get-curr-lang";
 import toast from "react-hot-toast";
 const useExecuteCode = () => {
   const language = useGetCurrLang();

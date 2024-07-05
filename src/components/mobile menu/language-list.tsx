@@ -1,4 +1,4 @@
-import useGetCurrLang from "@/hooks/useGetCurrLang";
+import useGetCurrLang from "@/hooks/use-get-curr-lang";
 import {
   BACKUP_LANGUAGE_VERSIONS,
   LANGUAGES,

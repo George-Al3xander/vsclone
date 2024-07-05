@@ -1,10 +1,11 @@
+"use client";
 import React from "react";
 import {
   BACKUP_LANGUAGE_VERSIONS,
   LANGUAGES_REACT_ICONS,
 } from "@/constants/consts";
 import Link from "next/link";
-import useGetCurrLang from "@/hooks/useGetCurrLang";
+import useGetCurrLang from "@/hooks/use-get-curr-lang";
 import { cn } from "@/lib/utils";
 import { roundedGlassStyle, titles } from "@/constants/data";
 function LanguageSelectionBar() {

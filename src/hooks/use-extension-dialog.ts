@@ -2,7 +2,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect } from "react";
 import { LANGUAGE_FILE_EXTENSIONS } from "@/constants/consts";
 import { getLangugeByExt } from "@/lib/utils";
-import useGetCurrLang from "@/hooks/useGetCurrLang";
+import useGetCurrLang from "@/hooks/use-get-curr-lang";
 
 const useExtensionDialog = () => {
   const searchParams = useSearchParams();

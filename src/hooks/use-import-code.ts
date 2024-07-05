@@ -1,7 +1,7 @@
 import { useSetRecoilState } from "recoil";
 import { $currentCode } from "@/state/atoms/atoms";
 import { useState } from "react";
-import useGetCurrLang from "@/hooks/useGetCurrLang";
+import useGetCurrLang from "@/hooks/use-get-curr-lang";
 import { LANGUAGE_FILE_EXTENSIONS } from "@/constants/consts";
 import { importCode } from "@/lib/actions";
 import toast from "react-hot-toast";

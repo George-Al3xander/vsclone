@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import EditorWindow from "@/components/editor-window";
 import Output from "@/components/output";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import useGetCurrLang from "@/hooks/useGetCurrLang";
+import useGetCurrLang from "@/hooks/use-get-curr-lang";
 import { LANGUAGE_FILE_EXTENSIONS } from "@/constants/consts";
 import { cn } from "@/lib/utils";
 import { roundedGlassStyle } from "@/constants/data";

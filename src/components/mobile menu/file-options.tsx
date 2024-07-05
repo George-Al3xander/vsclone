@@ -1,6 +1,6 @@
 import React from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import useGenDialogsMenu from "@/hooks/useGenDialogsMenu";
+import useGenDialogsMenu from "@/hooks/use-gen-dialogs-menu";
 import { FaFileImport, FaFileExport } from "react-icons/fa";
 import { fileManagerDialogs } from "@/constants/data";
 import { optionStyles } from "@/components/mobile menu/mobile-menu";
