@@ -2,27 +2,22 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { roundedGlassStyle } from "@/constants/data";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { $output, $outputVisibility } from "@/state/atoms/atoms";
 import RunCodeBtn from "@/components/run-code-btn";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { RxCross1 } from "react-icons/rx";
-import { $isVertical } from "@/state/selectors/selectors";
+import useOutput from "@/hooks/use-output";
 function Output() {
-  const [output, setOutput] = useRecoilState($output);
-  const open = useRecoilValue($outputVisibility);
-  const clearOutput = () => setOutput(undefined);
-  const isVertical = useRecoilValue($isVertical);
+  const { isVertical, clearOutput, output, open } = useOutput();
 
-  if (!open) return null;
   return (
     <div
       className={cn(
-        "relative h-[calc(100vh-10rem)] w-full p-4 sm:h-[20vh]",
+        "relative -z-10 h-[calc(100vh-10rem)] w-full p-4 sm:h-[20vh]",
         roundedGlassStyle,
         {
           "sm:h-full sm:w-1/3": !isVertical,
+          "sm:hidden": !open,
         },
       )}
     >
