@@ -29,6 +29,7 @@ function ImportMenu() {
           <input
             onChange={onChange}
             id="file"
+            data-testid="import-file-input"
             type="file"
             accept=".txt,.js,.ts,.py,.java,.cs,.php,.cpp,.c"
             className="col-span-3"

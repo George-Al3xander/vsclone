@@ -31,6 +31,7 @@ export function FileManagerDropdown() {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className={"hidden sm:inline"}>
+            <span className="sr-only">Open settings</span>
             <Settings2 />
           </Button>
         </DropdownMenuTrigger>
