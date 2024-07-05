@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Logo from "@/components/logo";
 import { FileManagerDropdown } from "@/components/file/file-manager-menu";

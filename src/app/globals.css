@@ -63,7 +63,6 @@
 
 body, .og-image {
   /*background: radial-gradient(circle at 10% 20%, rgb(3, 235, 255) 0%, rgb(152, 70, 242) 100.2%);*/
-  /*  background-image: url("../../public/assets/img/bg_apple.jpg");*/
     background-image: url("../../public/assets/img/bg_macos.jpg");
 }
 
@@ -80,6 +79,9 @@ body, .og-image {
     height: 100%;
     gap: 1rem
   }
+}
+.monaco-editor .editor-widget {
+  z-index: 20;
 }
 
 

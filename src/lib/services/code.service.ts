@@ -4,6 +4,7 @@ import {
   BASE_URL,
   LANGUAGE_FILE_EXTENSIONS,
 } from "@/constants/consts";
+import { ChangeEvent } from "react";
 
 export class CodeService {
   async executeCode({
@@ -75,9 +76,9 @@ export class CodeService {
     }
   }
   importCode(
-    assigmentCallback: (code: string) => void,
+    assigmentCallback: (code: string, ext: string) => void,
     errorCallback: () => void,
-  ): (e: React.ChangeEvent<HTMLInputElement>) => void {
+  ): (e: ChangeEvent<HTMLInputElement>) => void {
     return (e) => {
       //let code: string = "test";
       const { files } = e.target;
@@ -94,7 +95,7 @@ export class CodeService {
 
       fr.onload = function (event) {
         if (!event.target) return errorCallback();
-        assigmentCallback(event.target.result as string);
+        assigmentCallback(event.target.result as string, ext);
       };
       fr.readAsText(file);
     };

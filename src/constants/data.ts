@@ -113,3 +113,10 @@ export const titles = {
   php: "PHP",
   cpp: "C++",
 };
+
+export const fileExtensionDialog = {
+  title: "Alert: Different File Extension Detected",
+  description: `You've imported a file with a different language extension. The imported code is already saved. \n Do you want to stay on the current page or switch to the actual language?`,
+  btn_cancel: "Stay Here",
+  btn_accept: "Switch Language",
+};

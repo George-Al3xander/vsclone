@@ -5,6 +5,7 @@ import { useRecoilState } from "recoil";
 import { atomBooleanOptions as opts } from "@/components/file/settings-sub-menu";
 import { $tabSwitchStatus } from "@/state/atoms/atoms";
 import { VscMultipleWindows } from "react-icons/vsc";
+
 const CheckOption = ({ Icon, title, atom }: TAtomicBooleanOption) => {
   const [open, setOpen] = useRecoilState(atom);
 
@@ -14,7 +15,7 @@ const CheckOption = ({ Icon, title, atom }: TAtomicBooleanOption) => {
         checked={open}
         onCheckedChange={(event) => {
           const isChecked =
-            //@ts-ignore
+            //@ts-expect-error Something wrong
             typeof event === "boolean" ? event : event.target.checked;
           setOpen(isChecked);
         }}
@@ -37,6 +38,7 @@ const atomBooleanOptions = opts.concat({
   atom: $tabSwitchStatus,
   title: "Switch tabs while compiling",
   Icon: VscMultipleWindows,
+  id: "tab_switch",
 });
 
 function MenuCheckboxes() {

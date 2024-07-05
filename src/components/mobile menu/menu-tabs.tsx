@@ -6,7 +6,6 @@ import LanguageList from "@/components/mobile menu/language-list";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import MenuCheckboxes from "@/components/mobile menu/menu-checkboxes";
-import MenuRadio from "@/components/mobile menu/menu-radio";
 const menuTabs: { value: string; content: ReactNode }[] = [
   {
     value: "settings",

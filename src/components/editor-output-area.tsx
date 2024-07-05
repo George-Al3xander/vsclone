@@ -7,12 +7,15 @@ import { $outputPosition } from "@/state/atoms/atoms";
 import { cn } from "@/lib/utils";
 import { TOutputPosition } from "@/types/types";
 import MobileMainTabs from "@/components/mobile-main-tabs";
+import ExtensionAlertDialog from "@/components/extension-alert-dialog";
 
 function EditorOutputArea() {
   const currPosition = useRecoilValue($outputPosition);
+
   const position = (ps: TOutputPosition) => currPosition === ps;
   return (
     <>
+      <ExtensionAlertDialog />
       <main
         className={cn("hidden w-full flex-col gap-4 sm:flex", {
           "flex-col": position("bottom"),

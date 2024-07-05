@@ -1,8 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { VscLoading } from "react-icons/vsc";
 import { AiFillCode } from "react-icons/ai";
-//Preparing the code-editing area. It will be available shortly.
 function LoadingMessage({
   outputVisibility,
   isVertical,
@@ -24,7 +22,6 @@ function LoadingMessage({
         Preparing the code-editing area. It will be available shortly.
       </p>
       <h4 className="opacity-60 sm:text-lg">Please wait</h4>
-      {/*<VscLoading className="animate-spin" size={20} />*/}
     </div>
   );
 }

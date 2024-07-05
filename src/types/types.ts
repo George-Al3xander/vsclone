@@ -23,7 +23,14 @@ export type TAtomicBooleanOption = {
   atom: RecoilState<boolean>;
   Icon?: IconType;
   title: string;
+  id: TLocalStorageKey;
 };
 
 export type TOutputPosition = "top" | "bottom" | "left" | "right";
 export type TMobileTab = "editor" | "output";
+export type TLocalStorageKey =
+  | "position"
+  | "visibility"
+  | "inteli"
+  | "current_code"
+  | "tab_switch";

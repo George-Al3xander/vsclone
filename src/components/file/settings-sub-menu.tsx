@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { VscSettingsGear } from "react-icons/vsc";
 
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import {
   $intelliSenseStatus,
   $outputPosition,
@@ -22,18 +22,20 @@ import {
 } from "@/state/atoms/atoms";
 import { BsTerminalFill } from "react-icons/bs";
 import { MdTipsAndUpdates } from "react-icons/md";
-import { TAtomicBooleanOption, TOutputPosition } from "@/types/types";
+import { TAtomicBooleanOption } from "@/types/types";
 import { outputPositionVariants } from "@/constants/data";
 export const atomBooleanOptions: TAtomicBooleanOption[] = [
   {
     atom: $outputVisibility,
     Icon: BsTerminalFill,
     title: "Show terminal",
+    id: "visibility",
   },
   {
     atom: $intelliSenseStatus,
     Icon: MdTipsAndUpdates,
     title: "Enable suggestions",
+    id: "inteli",
   },
 ];
 function VisibilityCheckboxOption({ atom, Icon, title }: TAtomicBooleanOption) {
@@ -51,10 +53,17 @@ function VisibilityCheckboxOption({ atom, Icon, title }: TAtomicBooleanOption) {
 }
 function OutputPosition() {
   const [position, setPosition] = useRecoilState($outputPosition);
+  const visibilityStatus = useRecoilValue($outputVisibility);
+
   return (
     <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
       {outputPositionVariants.map((opt) => (
-        <DropdownMenuRadioItem className="capitalize" key={opt} value={opt}>
+        <DropdownMenuRadioItem
+          disabled={!visibilityStatus}
+          className="capitalize"
+          key={opt}
+          value={opt}
+        >
           {opt}{" "}
         </DropdownMenuRadioItem>
       ))}
@@ -75,8 +84,8 @@ function SettingsSubMenu() {
             <DropdownMenuLabel>Editor options</DropdownMenuLabel>
             <DropdownMenuSeparator />
 
-            {atomBooleanOptions.map((opt, index) => (
-              <VisibilityCheckboxOption key={opt.title + index} {...opt} />
+            {atomBooleanOptions.map((opt) => (
+              <VisibilityCheckboxOption key={opt.title + opt.id} {...opt} />
             ))}
             <DropdownMenuLabel className="mt-2">
               Terminal position

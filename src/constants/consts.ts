@@ -1,6 +1,7 @@
 import { FaJs, FaPython, FaJava, FaPhp } from "react-icons/fa";
 import { TbBrandCSharp, TbBrandCpp } from "react-icons/tb";
 import { SiTypescript } from "react-icons/si";
+import { TLocalStorageKey } from "@/types/types";
 export const LANGUAGES = [
   "javascript",
   "typescript",
@@ -55,4 +56,13 @@ export const LANGUAGES_REACT_ICONS = {
   csharp: TbBrandCSharp,
   php: FaPhp,
   cpp: TbBrandCpp,
+};
+
+// eslint-disable-next-line
+export const localStorageKeys: { [key in TLocalStorageKey]: string } = {
+  position: "output-position",
+  visibility: "output-visibility",
+  inteli: "intelli-sense-status",
+  current_code: "current_code",
+  tab_switch: "tab-switch-status",
 };
