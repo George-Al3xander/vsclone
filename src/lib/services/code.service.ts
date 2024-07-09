@@ -39,8 +39,7 @@ export class CodeService {
       return {
         status: 500,
         title: "Compilation error",
-        message:
-          e instanceof Error ? e.message : "Compilation error description",
+        message: e instanceof Error ? e.message : "Something went wrong",
       };
     }
   }
