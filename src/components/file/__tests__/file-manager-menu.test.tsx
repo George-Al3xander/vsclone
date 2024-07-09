@@ -6,7 +6,6 @@ import { userEvent } from '@testing-library/user-event';
 import { RecoilRoot } from 'recoil';
 
 import { FileManagerDropdown } from '@/components/file/file-manager-menu';
-import { atomBooleanOptions } from '@/components/file/settings-sub-menu';
 import { fileManagerDialogs } from '@/constants/data';
 
 const setup = () => {
