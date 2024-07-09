@@ -21,7 +21,12 @@ function MobileMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button className={"sm:hidden"} variant="ghost" size="icon">
+        <Button
+          aria-label="open menu"
+          className={"sm:hidden"}
+          variant="ghost"
+          size="icon"
+        >
           <VscMenu size={20} />
         </Button>
       </SheetTrigger>

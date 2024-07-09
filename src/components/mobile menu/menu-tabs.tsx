@@ -19,11 +19,6 @@ const menuTabs: { value: string; content: ReactNode }[] = [
         </DropdownMenuLabel>
         <Separator className="my-2" />
         <MenuCheckboxes />
-        {/*<DropdownMenuLabel className={"mt-4 text-lg"}>*/}
-        {/*  Terminal position*/}
-        {/*</DropdownMenuLabel>*/}
-        {/*<Separator className="my-2" />*/}
-        {/*<MenuRadio />*/}
       </>
     ),
   },
@@ -37,7 +32,12 @@ function MenuTabs() {
     <Tabs defaultValue={menuTabs[0].value} className="w-full">
       <TabsList className="mx-auto my-2 w-full">
         {menuTabs.map(({ value }) => (
-          <TabsTrigger className="capitalize" value={value} key={value}>
+          <TabsTrigger
+            aria-label={value + " tab trigger"}
+            className="capitalize"
+            value={value}
+            key={value}
+          >
             {value}
           </TabsTrigger>
         ))}
