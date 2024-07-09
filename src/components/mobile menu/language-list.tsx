@@ -1,15 +1,16 @@
 import React from 'react';
 
+import useGetCurrLang from '@/hooks/use-get-curr-lang';
+import Link from 'next/link';
+
 import { optionStyles } from '@/components/mobile menu/mobile-menu';
+import { cn } from '@/lib/utils';
 import {
     BACKUP_LANGUAGE_VERSIONS,
     LANGUAGES,
     LANGUAGES_REACT_ICONS,
 } from '@/constants/consts';
 import { titles } from '@/constants/data';
-import useGetCurrLang from '@/hooks/use-get-curr-lang';
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
 
 const LanguageList = () => {
     const curLang = useGetCurrLang();

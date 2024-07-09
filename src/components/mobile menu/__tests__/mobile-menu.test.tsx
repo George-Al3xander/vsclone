@@ -3,11 +3,12 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 
+import { RecoilRoot } from 'recoil';
+
 import { atomBooleanOptions } from '@/components/file/settings-sub-menu';
 import MobileMenu from '@/components/mobile menu/mobile-menu';
 import { LANGUAGES } from '@/constants/consts';
 import { fileManagerDialogs, metadata, titles } from '@/constants/data';
-import { RecoilRoot } from 'recoil';
 
 const setup = async (mode: 'default' | 'open' | undefined = 'default') => {
     render(

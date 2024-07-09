@@ -1,22 +1,25 @@
-import { LANGUAGES } from "@/constants/consts";
-import { notFound } from "next/navigation";
-import React from "react";
-import EditorOutputArea from "@/components/editor-output-area";
-import { genPageMetadata } from "@/lib/og-data";
-import TemplateWrapper from "@/components/template-wrapper";
+import React from 'react';
+
+import { notFound } from 'next/navigation';
+
+import EditorOutputArea from '@/components/editor-output-area';
+import TemplateWrapper from '@/components/template-wrapper';
+import { genPageMetadata } from '@/lib/og-data';
+import { LANGUAGES } from '@/constants/consts';
+
 export const generateMetadata = genPageMetadata;
 export default function Home({
-  params: { lang = LANGUAGES },
+    params: { lang = LANGUAGES },
 }: {
-  params: { lang?: readonly string[] };
+    params: { lang?: readonly string[] };
 }) {
-  const [language] = lang;
+    const [language] = lang;
 
-  if (!LANGUAGES.includes(language as "cpp")) notFound();
+    if (!LANGUAGES.includes(language as 'cpp')) notFound();
 
-  return (
-    <TemplateWrapper>
-      <EditorOutputArea />
-    </TemplateWrapper>
-  );
+    return (
+        <TemplateWrapper>
+            <EditorOutputArea />
+        </TemplateWrapper>
+    );
 }
