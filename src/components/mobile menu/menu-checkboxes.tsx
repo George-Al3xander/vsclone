@@ -17,10 +17,11 @@ const CheckOption = ({ Icon, title, atom }: TAtomicBooleanOption) => {
                 checked={open}
                 onCheckedChange={(event) => {
                     const isChecked =
-                        //@ts-expect-error Something wrong
                         typeof event === 'boolean'
                             ? event
-                            : event.target.checked;
+                            : //eslint-disable-next-line
+                              //@ts-ignore
+                              event.target.checked;
                     setOpen(isChecked);
                 }}
                 id={title}
