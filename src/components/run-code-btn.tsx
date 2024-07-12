@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { VscLoading, VscPlay } from 'react-icons/vsc';
 

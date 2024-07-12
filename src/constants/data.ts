@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import { Github, Mail, MessageSquare } from 'lucide-react';
+import { Github } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -15,9 +15,6 @@ export const metadata: Metadata = {
 
 const githubHref = 'https://github.com/George-Al3xander';
 
-export const roundedGlassStyle =
-    'shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-xl border border-white border-opacity-40 bg-black bg-opacity-40';
-
 export const fileManagerDialogs = {
     import: React.createElement(ImportMenu),
     export: React.createElement(ExportMenu),
@@ -26,21 +23,6 @@ export const fileManagerDialogs = {
 const optionsIconProps = {
     className: 'mr-2 h-4 w-4',
 };
-
-export const settingsOptions = [
-    React.createElement(
-        Fragment,
-        { key: 'opt-1' },
-        React.createElement(Mail, optionsIconProps),
-        React.createElement('span', null, 'Opt 1'),
-    ),
-    React.createElement(
-        Fragment,
-        { key: 'opt-2' },
-        React.createElement(MessageSquare, optionsIconProps),
-        React.createElement('span', null, 'Opt 2'),
-    ),
-];
 
 export const githubOption = (className?: string) =>
     React.createElement(

@@ -1,11 +1,11 @@
 import { usePathname } from 'next/navigation';
 
-import { TLanguage } from '@/types/types';
+import { getCurrentLanguage } from '@/lib/utils';
 
 const useGetCurrLang = () => {
     const pathname = usePathname();
-    const split = pathname.split('/');
-    return (split[1].length > 0 ? split[1] : 'javascript') as TLanguage;
+
+    return getCurrentLanguage(pathname);
 };
 
 export default useGetCurrLang;

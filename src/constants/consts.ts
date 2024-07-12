@@ -2,8 +2,6 @@ import { FaJava, FaJs, FaPhp, FaPython } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 import { TbBrandCpp, TbBrandCSharp } from 'react-icons/tb';
 
-import { TLocalStorageKey } from '@/types/types';
-
 export const LANGUAGES = [
     'javascript',
     'typescript',
@@ -26,18 +24,6 @@ export const BACKUP_LANGUAGE_VERSIONS = {
     cpp: '10.2.0',
 };
 
-export const CODE_SNIPPETS = {
-    javascript:
-        'const greet = (name) => {\n  console.log(`Hello, ${name}!`);\n};\ngreet("World");',
-    typescript:
-        'interface Person {\n  name: string;\n  age: number;\n}\n\nconst person: Person = { name: "John", age: 25 };\nconsole.log(`Name: ${person.name}, Age: ${person.age}`);',
-    python: 'def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)\n\nprint(factorial(5));',
-    java: 'public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println("Hello, World!");\n    }\n}',
-    csharp: 'using System;\n\nclass Program {\n    static void Main() {\n        Console.WriteLine("Hello, C#!");\n    }\n}',
-    php: '$color = "blue";\necho "The sky is $color";',
-    cpp: '#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, C++!" << endl;\n    return 0;\n}',
-};
-
 export const LANGUAGE_FILE_EXTENSIONS = {
     javascript: '.js',
     typescript: '.ts',
@@ -56,13 +42,4 @@ export const LANGUAGES_REACT_ICONS = {
     csharp: TbBrandCSharp,
     php: FaPhp,
     cpp: TbBrandCpp,
-};
-
-// eslint-disable-next-line
-export const localStorageKeys: { [key in TLocalStorageKey]: string } = {
-    position: 'output-position',
-    visibility: 'output-visibility',
-    inteli: 'intelli-sense-status',
-    current_code: 'current_code',
-    tab_switch: 'tab-switch-status',
 };

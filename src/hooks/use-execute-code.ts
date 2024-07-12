@@ -11,7 +11,6 @@ import {
     $output,
     $tabSwitchStatus,
 } from '@/state/atoms/atoms';
-import { sampleCode } from '@/constants/data';
 
 const useExecuteCode = () => {
     const language = useGetCurrLang();
@@ -26,9 +25,13 @@ const useExecuteCode = () => {
         if (switchTab) {
             setTab('output');
         }
+
+        const code =
+            currentCode ||
+            (await import('@/constants/data')).sampleCode[language];
         try {
             const result = await executeCode({
-                code: currentCode || sampleCode[language],
+                code,
                 language,
             });
             if ('run' in result) {

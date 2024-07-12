@@ -60,8 +60,7 @@
 
 body,
 .og-image {
-    /*background: radial-gradient(circle at 10% 20%, rgb(3, 235, 255) 0%, rgb(152, 70, 242) 100.2%);*/
-    background-image: url('../../public/assets/img/bg_macos.jpg');
+    background-image: url('../../public/assets/img/bg_macos.webp');
 }
 
 .editor-grid {
@@ -80,4 +79,9 @@ body,
 }
 .monaco-editor .editor-widget {
     z-index: 20;
+}
+
+
+.roundedGlass {
+    @apply shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-xl border border-white border-opacity-40 bg-black bg-opacity-40;
 }

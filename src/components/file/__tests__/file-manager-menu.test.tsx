@@ -5,7 +5,7 @@ import { userEvent } from '@testing-library/user-event';
 
 import { RecoilRoot } from 'recoil';
 
-import { FileManagerDropdown } from '@/components/file/file-manager-menu';
+import FileManagerDropdown from '@/components/file/file-manager-menu';
 import { fileManagerDialogs } from '@/constants/data';
 
 const setup = () => {

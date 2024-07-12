@@ -1,40 +1,41 @@
-import React, { ReactNode } from 'react';
+'use client';
 
-import useGetCurrLang from '@/hooks/use-get-curr-lang';
+import React from 'react';
+
 import useMobileTabs from '@/hooks/use-mobile-tabs';
 
 import EditorWindow from '@/components/editor-window';
 import Output from '@/components/output';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
-import { LANGUAGE_FILE_EXTENSIONS } from '@/constants/consts';
-import { roundedGlassStyle } from '@/constants/data';
 import { TMobileTab } from '@/types/types';
 
+const menuTabs: {
+    value: TMobileTab;
+    content: React.ReactNode;
+    title: string;
+}[] = [
+    {
+        value: 'editor',
+        title: `Editor`,
+        content: <EditorWindow />,
+    },
+    {
+        value: 'output',
+        title: 'Output',
+        content: <Output />,
+    },
+];
 function MobileMainTabs() {
     const { tab, onTabChange } = useMobileTabs();
-    const currLang = useGetCurrLang();
-    const ext = LANGUAGE_FILE_EXTENSIONS[currLang];
-    const menuTabs: { value: TMobileTab; content: ReactNode; title: string }[] =
-        [
-            {
-                value: 'editor',
-                title: `main${ext}`,
-                content: <EditorWindow />,
-            },
-            {
-                value: 'output',
-                title: 'Output',
-                content: <Output />,
-            },
-        ];
+
     return (
-        <main className={'sm:hidden'}>
+        <section className={'sm:hidden'}>
             <Tabs value={tab} onValueChange={onTabChange}>
                 <TabsList
                     className={cn(
                         'mx-auto flex w-[min-content]',
-                        roundedGlassStyle,
+                        'roundedGlass',
                     )}
                 >
                     {menuTabs.map(({ value, title }) => (
@@ -50,7 +51,7 @@ function MobileMainTabs() {
                     </TabsContent>
                 ))}
             </Tabs>
-        </main>
+        </section>
     );
 }
 

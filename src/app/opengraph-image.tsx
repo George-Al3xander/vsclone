@@ -5,7 +5,6 @@ import { ImageResponse } from 'next/og';
 import { LANGUAGES } from '@/constants/consts';
 import { metadata, titles } from '@/constants/data';
 
-//import bg from "../../public/assets/img/bg_macos.jpg";
 // Route segment config
 export const runtime = 'edge';
 

@@ -6,14 +6,13 @@ import useEditor from '@/hooks/use-editor';
 import Editor from '@monaco-editor/react';
 
 import { cn } from '@/lib/utils';
-import { roundedGlassStyle } from '@/constants/data';
 
 function EditorWindow() {
     const { isVertical, outputVisibility, ...props } = useEditor();
 
     return (
         <div
-            className={cn('p-2', roundedGlassStyle, {
+            className={cn('p-2', 'roundedGlass', {
                 'sm:w-[70%]': !isVertical && outputVisibility,
                 'sm:w-[100%]': !outputVisibility,
             })}

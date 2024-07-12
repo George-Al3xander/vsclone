@@ -17,7 +17,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { exportCode } from '@/lib/actions';
 import { $currentCode } from '@/state/atoms/atoms';
-import { CODE_SNIPPETS, LANGUAGE_FILE_EXTENSIONS } from '@/constants/consts';
+import { LANGUAGE_FILE_EXTENSIONS } from '@/constants/consts';
+import { sampleCode } from '@/constants/data';
 
 function ExportMenu() {
     const code = useRecoilValue($currentCode);
@@ -51,7 +52,7 @@ function ExportMenu() {
                     <Button
                         onClick={() =>
                             exportCode({
-                                code: code ?? CODE_SNIPPETS[language],
+                                code: code ?? sampleCode[language],
                                 fileName,
                                 language,
                             })

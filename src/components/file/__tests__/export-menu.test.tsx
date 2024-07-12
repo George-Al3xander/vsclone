@@ -9,7 +9,7 @@ import ExportMenu from '@/components/file/export-menu';
 import { Dialog } from '@/components/ui/dialog';
 import { RecoilObserver } from '@/lib/test-utils';
 import { $currentCode } from '@/state/atoms/atoms';
-import { CODE_SNIPPETS } from '@/constants/consts';
+import { sampleCode } from '@/constants/data';
 
 import * as actions from '../../../lib/actions';
 
@@ -87,7 +87,7 @@ describe('export-menu', () => {
                 await userEvent.click(exportButton);
                 expect(exportFn).toHaveBeenCalled();
                 expect(exportFn).toHaveBeenCalledWith({
-                    code: CODE_SNIPPETS['javascript'],
+                    code: sampleCode['javascript'],
                     language: 'javascript',
                     fileName: undefined,
                 });

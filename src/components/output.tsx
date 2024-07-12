@@ -9,7 +9,6 @@ import RunCodeBtn from '@/components/run-code-btn';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-import { roundedGlassStyle } from '@/constants/data';
 
 function Output() {
     const { isVertical, clearOutput, output, open } = useOutput();
@@ -18,7 +17,7 @@ function Output() {
         <div
             className={cn(
                 'relative z-[1] h-[calc(100vh-10rem)] w-full p-4 sm:h-[20vh]',
-                roundedGlassStyle,
+                'roundedGlass',
                 {
                     'sm:h-full sm:w-1/3': !isVertical,
                     'sm:hidden': !open,

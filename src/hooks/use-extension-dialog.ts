@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import useGetCurrLang from '@/hooks/use-get-curr-lang';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-import { getLangugeByExt } from '@/lib/utils';
+import { getLanguageByExt } from '@/lib/utils';
 import { LANGUAGE_FILE_EXTENSIONS } from '@/constants/consts';
 
 const useExtensionDialog = () => {
@@ -27,7 +27,7 @@ const useExtensionDialog = () => {
 
     const cancel = () => router.push('?');
 
-    const accept = () => router.push(`/${getLangugeByExt(`.${ext}`)}`);
+    const accept = () => router.push(`/${getLanguageByExt(`.${ext}`)}`);
 
     return { open, accept, cancel, setOpen };
 };

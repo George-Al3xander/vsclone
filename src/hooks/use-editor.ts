@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
 import useGetCurrLang from '@/hooks/use-get-curr-lang';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import { useRecoilState, useRecoilValue } from 'recoil';
 
 import LoadingMessage from '@/components/loading-message';

@@ -10,7 +10,7 @@ import {
     BACKUP_LANGUAGE_VERSIONS,
     LANGUAGES_REACT_ICONS,
 } from '@/constants/consts';
-import { roundedGlassStyle, titles } from '@/constants/data';
+import { titles } from '@/constants/data';
 
 function LanguageSelectionBar() {
     const currLang = useGetCurrLang();
@@ -18,7 +18,7 @@ function LanguageSelectionBar() {
         <ul
             className={cn(
                 'hidden h-full justify-between gap-4 p-2 sm:flex sm:flex-col',
-                roundedGlassStyle,
+                'roundedGlass',
             )}
         >
             {Object.entries(LANGUAGES_REACT_ICONS).map(([lang, Icon]) => (

@@ -1,25 +1,16 @@
 import React from 'react';
 
-import { notFound } from 'next/navigation';
-
-import EditorOutputArea from '@/components/editor-output-area';
-import TemplateWrapper from '@/components/template-wrapper';
+import DesktopMain from '@/components/desktop-main';
+import MobileMainTabs from '@/components/mobile-main-tabs';
 import { genPageMetadata } from '@/lib/og-data';
-import { LANGUAGES } from '@/constants/consts';
 
 export const generateMetadata = genPageMetadata;
-export default function Home({
-    params: { lang = LANGUAGES },
-}: {
-    params: { lang?: readonly string[] };
-}) {
-    const [language] = lang;
 
-    if (!LANGUAGES.includes(language as 'cpp')) notFound();
-
+export default function Home() {
     return (
-        <TemplateWrapper>
-            <EditorOutputArea />
-        </TemplateWrapper>
+        <>
+            <MobileMainTabs />
+            <DesktopMain />
+        </>
     );
 }

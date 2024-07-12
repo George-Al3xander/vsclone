@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { FaFileExport, FaFileImport } from 'react-icons/fa';
 
@@ -17,7 +19,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { fileManagerDialogs, githubOption } from '@/constants/data';
 
-export function FileManagerDropdown() {
+export default function FileManagerDropdown() {
     const { open, content, triggers, setOpen } = useGenDialogsMenu(
         fileManagerDialogs,
         DropdownMenuItem,

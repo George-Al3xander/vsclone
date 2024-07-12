@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { FaFileExport, FaFileImport } from 'react-icons/fa';
 

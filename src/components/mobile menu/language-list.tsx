@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import useGetCurrLang from '@/hooks/use-get-curr-lang';
