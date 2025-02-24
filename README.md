@@ -12,7 +12,7 @@ This project is a web-based code editor that supports multiple programming langu
 -   **TypeScript**: A typed superset of JavaScript.
 -   **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 -   **shadcn**: A UI library for React components.
--   **Recoil**: A state management library for React.
+-   **Redux**: A state management library for React.
 
 ## Features
 
