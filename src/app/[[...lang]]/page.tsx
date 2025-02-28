@@ -1,6 +1,7 @@
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import { metadataConfig } from "@/configs/metadata";
 import { PageProps } from "@/types/app";
+import StateTest from "@/ui/components/StateTest";
 import { Metadata } from "next";
 
 const LANGUAGES = Object.keys(LANGUAGES_CONFIG) as [string, ...string[]];
@@ -21,6 +22,15 @@ export const generateMetadata = async ({
     };
 };
 
-export default function Home({}: PageProps) {
-    return <div>Hello</div>;
+type HomePageProps = PageProps<{ lang?: string[] }>;
+
+export default async function Home({ params }: HomePageProps) {
+    const [lang] = (await params).lang || "javascript";
+
+    return (
+        <div>
+            {lang}
+            <StateTest />
+        </div>
+    );
 }
