@@ -65,18 +65,3 @@
 body {
     background-image: url("../../public/assets/img/bg_macos.webp");
 }
-
-.editor-grid {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1rem;
-}
-
-@media (min-width: 640px) {
-    .editor-grid {
-        display: grid;
-        grid-template-columns: 75px minmax(0px, auto);
-        height: 100%;
-        gap: 1rem;
-    }
-}
