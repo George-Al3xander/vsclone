@@ -15,5 +15,6 @@ export {
 export {
     VscLoading as VscLoadingIcon,
     VscPlay as VscPlayIcon,
+    VscVscode as VscVscodeIcon,
 } from "react-icons/vsc";
 export * from "./raw";
