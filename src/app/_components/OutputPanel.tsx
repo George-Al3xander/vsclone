@@ -14,12 +14,12 @@ export const OutputPanel = () => {
     return (
         <div
             className={
-                "roundedGlass relative z-[1] mt-auto h-[calc(100vh-10rem)] w-full p-4 sm:h-[20vh]"
+                "roundedGlass relative z-[1] mt-auto flex h-[calc(100vh-10rem)] w-full flex-col gap-4 p-4 sm:h-[20vh] sm:flex-row-reverse"
             }
         >
             <div
                 className={
-                    "ml-auto flex w-[min-content] justify-end rounded-md bg-primary px-2"
+                    "ml-auto h-[max-content] w-[max-content] rounded-md bg-primary px-2"
                 }
             >
                 <Button variant="ghost" onClick={clearOutput} size="icon">
@@ -28,11 +28,12 @@ export const OutputPanel = () => {
                 </Button>
                 <ExecuteCodeButton />
             </div>
-            <ScrollArea className={"h-[calc(20vh-4rem)] max-w-full p-2"}>
+            <ScrollArea className={"h-[calc(20vh-4rem)] flex-1 p-2"}>
                 <p className="flex flex-col break-all">
                     {output
                         ?.split("\n")
-                        .map((line) => <span key={"line"}>{line}</span>) ||
+                        .filter(Boolean)
+                        .map((line) => <span key={line}>{line}</span>) ||
                         "Write, Edit and Run your code using online compiler."}
                 </p>
             </ScrollArea>
