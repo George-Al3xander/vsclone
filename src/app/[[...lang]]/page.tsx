@@ -1,7 +1,8 @@
+import { DesktopView } from "@/app/_components/DesktopView";
+import MobileView from "@/app/_components/MobileView";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import { metadataConfig } from "@/configs/metadata";
 import { PageProps } from "@/types/app";
-import StateTest from "@/ui/components/StateTest";
 import { Metadata } from "next";
 
 const LANGUAGES = Object.keys(LANGUAGES_CONFIG) as [string, ...string[]];
@@ -22,15 +23,11 @@ export const generateMetadata = async ({
     };
 };
 
-type HomePageProps = PageProps<{ lang?: string[] }>;
-
-export default async function Home({ params }: HomePageProps) {
-    const [lang] = (await params).lang || "javascript";
-
+export default function Home({}: PageProps) {
     return (
-        <div>
-            {lang}
-            <StateTest />
-        </div>
+        <>
+            <DesktopView />
+            <MobileView />
+        </>
     );
 }
