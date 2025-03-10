@@ -1,3 +1,4 @@
+export type { IconBaseProps, IconType } from "react-icons";
 export {
     FaJava as JavaIcon,
     FaJs as JavaScriptIcon,
