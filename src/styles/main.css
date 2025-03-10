@@ -65,3 +65,16 @@
 body {
     background-image: url("../../public/assets/img/bg_macos.webp");
 }
+
+.editor-desktop-grid {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .editor-desktop-grid {
+        display: grid;
+        grid-template-columns: 75px minmax(0px, auto);
+        height: 100%;
+        gap: 1rem;
+    }
+}
