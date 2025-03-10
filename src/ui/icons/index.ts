@@ -1,4 +1,5 @@
 export type { IconBaseProps, IconType } from "react-icons";
+export { AiFillCode as AiFillCodeIcon } from "react-icons/ai";
 export {
     FaJava as JavaIcon,
     FaJs as JavaScriptIcon,
