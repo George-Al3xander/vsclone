@@ -1,3 +1,4 @@
+export { HomeIcon, RotateCcwIcon } from "lucide-react";
 export type { IconBaseProps, IconType } from "react-icons";
 export { AiFillCode as AiFillCodeIcon } from "react-icons/ai";
 export {
@@ -6,6 +7,7 @@ export {
     FaPhp as PhpIcon,
     FaPython as PythonIcon,
 } from "react-icons/fa";
+export { MdOutlineReportProblem as MdOutlineReportProblemIcon } from "react-icons/md";
 export { RxCross1 as RxCross1Icon } from "react-icons/rx";
 export { SiTypescript as TypeScriptIcon } from "react-icons/si";
 export {
