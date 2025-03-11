@@ -1,6 +1,7 @@
 "use client";
 
 import { useEditorProps } from "@/app/_hooks/use-editor-props";
+import { IconTextBlock } from "@/ui/components/molecules/IconTextBlock";
 import { AiFillCodeIcon } from "@/ui/icons";
 import { cn } from "@/utils/cn";
 import EditorMonaco from "@monaco-editor/react";
@@ -18,19 +19,12 @@ export const Editor: FC<Props> = (props) => {
             {...props}
             className={cn(baseStyles, "min-h-full p-2", props?.className)}
             loading={
-                <div
-                    className={cn(
-                        baseStyles,
-                        "flex flex-col items-center justify-center text-center",
-                    )}
-                >
-                    <AiFillCodeIcon size={150} />
-                    <p className={"text-lg font-semibold sm:text-xl"}>
-                        Preparing the code-editing area. It will be available
-                        shortly.
-                    </p>
-                    <h4 className="opacity-60 sm:text-lg">Please wait...</h4>
-                </div>
+                <IconTextBlock
+                    title="Preparing the code-editing area. It will be available shortly."
+                    subtitle="Please wait..."
+                    icon={AiFillCodeIcon}
+                    containerProps={{ className: baseStyles }}
+                />
             }
             theme="vs-dark"
         />
