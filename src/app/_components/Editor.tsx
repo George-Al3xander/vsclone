@@ -1,32 +1,25 @@
 "use client";
 
 import { useEditorProps } from "@/app/_hooks/use-editor-props";
-import { IconTextBlock } from "@/ui/components/molecules/IconTextBlock";
-import { AiFillCodeIcon } from "@/ui/icons";
 import { cn } from "@/utils/cn";
 import EditorMonaco from "@monaco-editor/react";
-import { ComponentProps, FC } from "react";
+import { ComponentProps, FC, HTMLAttributes } from "react";
 
-type Props = ComponentProps<typeof EditorMonaco>;
+type Props = {
+    monacoEditorProps?: ComponentProps<typeof EditorMonaco>;
+    wrapperProps?: HTMLAttributes<HTMLDivElement>;
+};
 
-const baseStyles =
-    "roundedGlass h-[calc(100vh-12rem)] w-full  sm:h-[calc(100vh-9.5rem-20vh)]";
-
-export const Editor: FC<Props> = (props) => {
+export const Editor: FC<Props> = ({ monacoEditorProps, wrapperProps }) => {
     return (
-        <EditorMonaco
-            {...useEditorProps()}
-            {...props}
-            className={cn(baseStyles, "min-h-full p-2", props?.className)}
-            loading={
-                <IconTextBlock
-                    title="Preparing the code-editing area. It will be available shortly."
-                    subtitle="Please wait..."
-                    icon={AiFillCodeIcon}
-                    containerProps={{ className: baseStyles }}
-                />
-            }
-            theme="vs-dark"
-        />
+        <div
+            {...wrapperProps}
+            className={cn("roundedGlass p-2", wrapperProps?.className)}
+        >
+            <EditorMonaco
+                {...useEditorProps(monacoEditorProps)}
+                {...monacoEditorProps}
+            />
+        </div>
     );
 };
