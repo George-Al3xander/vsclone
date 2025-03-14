@@ -16,6 +16,7 @@ export {
 } from "react-icons/tb";
 export {
     VscLoading as VscLoadingIcon,
+    VscMenu as VscMenuIcon,
     VscPlay as VscPlayIcon,
     VscVscode as VscVscodeIcon,
 } from "react-icons/vsc";
