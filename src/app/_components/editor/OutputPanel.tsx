@@ -1,12 +1,12 @@
 "use client";
 
-import { ExecuteCodeButton } from "@/app/_components/ExecuteCodeButton";
 import { useCodeStore } from "@/store/use-code-store";
 import { Button } from "@/ui/components/atoms/Button";
 import { ScrollArea } from "@/ui/components/atoms/ScrollArea";
 import { RxCross1Icon } from "@/ui/icons";
 import { cn } from "@/utils/cn";
 import { ComponentProps, FC, HTMLAttributes } from "react";
+import { ExecuteCodeButton } from "./ExecuteCodeButton";
 
 type Props = {
     wrapperProps?: HTMLAttributes<HTMLDivElement>;

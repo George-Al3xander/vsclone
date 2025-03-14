@@ -1,9 +1,9 @@
 "use client";
 
-import { Editor } from "@/app/_components/Editor";
-import { OutputPanel } from "@/app/_components/OutputPanel";
 import { useOutputPositionDesktop } from "@/store/use-output-position-desktop";
 import { cn } from "@/utils/cn";
+import { Editor } from "./Editor";
+import { OutputPanel } from "./OutputPanel";
 
 export const EditingAreaDesktop = () => {
     const outputPosition = useOutputPositionDesktop((s) => s.outputPosition);

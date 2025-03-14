@@ -1,5 +1,5 @@
-import { EditingAreaDesktop } from "@/app/_components/EditingAreaDesktop";
-import { LanguageSelectionList } from "@/app/_components/LanguageSelectionList";
+import { EditingAreaDesktop } from "@/app/_components/editor/EditingAreaDesktop";
+import { LanguageSelectionList } from "@/app/_components/shared/LanguageSelectionList";
 
 export const DesktopView = () => {
     return (

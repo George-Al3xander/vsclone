@@ -1,5 +1,5 @@
-import { DesktopView } from "@/app/_components/DesktopView";
-import MobileView from "@/app/_components/MobileView";
+import { DesktopView } from "@/app/_components/views/DesktopView";
+import MobileView from "@/app/_components/views/MobileView";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import { metadataConfig } from "@/configs/metadata";
 import { PageProps } from "@/types/app";

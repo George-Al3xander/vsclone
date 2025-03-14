@@ -1,8 +1,8 @@
-import { ExecuteCodeButton } from "@/app/_components/ExecuteCodeButton";
-import { LanguageSelectionList } from "@/app/_components/LanguageSelectionList";
-import { Logo } from "@/app/_components/Logo";
+import { ExecuteCodeButton } from "@/app/_components/editor/ExecuteCodeButton";
 import { SheetMenu } from "@/ui/components/organisms/SheetMenu";
 import { VscMenu } from "react-icons/vsc";
+import { LanguageSelectionList } from "./LanguageSelectionList";
+import { Logo } from "./Logo";
 
 export const Header = () => (
     <>

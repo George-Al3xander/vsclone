@@ -1,7 +1,7 @@
 "use client";
 
-import { Editor } from "@/app/_components/Editor";
-import { OutputPanel } from "@/app/_components/OutputPanel";
+import { Editor } from "@/app/_components/editor/Editor";
+import { OutputPanel } from "@/app/_components/editor/OutputPanel";
 import { useMobileTabs } from "@/app/_hooks/use-mobile-tabs";
 import {
     Tabs,

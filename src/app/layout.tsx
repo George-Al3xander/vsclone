@@ -1,4 +1,4 @@
-import { Header } from "@/app/_components/Header";
+import { Header } from "@/app/_components/shared/Header";
 import "@/styles/main.css";
 import { LayoutProps } from "@/types/app";
 import { TemplateScaffold } from "@/ui/components/templates/Scaffold";
