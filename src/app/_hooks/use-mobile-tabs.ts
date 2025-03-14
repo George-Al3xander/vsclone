@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useMobileTabsStore } from "@/store/use-mobile-tabs-store";
 
 export const useMobileTabs = () => {
-    const [tab, setTab] = useState<"editor" | "output">("editor");
-    const onTabChange = (value: string) => setTab(value as "editor" | "output");
+    const tab = useMobileTabsStore((s) => s.tab);
+    const onTabChange = useMobileTabsStore((s) => s.setTab);
 
     return { tab, onTabChange };
 };
