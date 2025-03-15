@@ -1,4 +1,4 @@
-export { HomeIcon, RotateCcwIcon } from "lucide-react";
+export { GithubIcon, HomeIcon, RotateCcwIcon } from "lucide-react";
 export type { IconBaseProps, IconType } from "react-icons";
 export { AiFillCode as AiFillCodeIcon } from "react-icons/ai";
 export {
@@ -15,9 +15,12 @@ export {
     TbBrandCpp as CppIcon,
 } from "react-icons/tb";
 export {
+    VscEyeClosed as VscEyeClosedIcon,
+    VscEye as VscEyeIcon,
     VscLoading as VscLoadingIcon,
     VscMenu as VscMenuIcon,
     VscPlay as VscPlayIcon,
+    VscSettingsGear as VscSettingsGearIcon,
     VscVscode as VscVscodeIcon,
 } from "react-icons/vsc";
 export * from "./raw";
