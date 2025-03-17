@@ -8,6 +8,7 @@ import { cn } from "@/utils/cn";
 import EditorMonaco from "@monaco-editor/react";
 import debounce from "lodash/debounce";
 import { ComponentProps, createElement } from "react";
+import codeSamples from "../../../public/json/codeSamples.json";
 
 const sizeBase = "h-[calc(100vh-11rem)] w-full";
 
@@ -17,7 +18,9 @@ export const useEditorProps = (
     defaultProps?: ComponentProps<typeof EditorMonaco>,
 ): ComponentProps<typeof EditorMonaco> => {
     const defaultLanguage = useLanguageParam();
-    const defaultValue = useCodeStore((s) => s.code);
+    const defaultValue =
+        useCodeStore((s) => s.code) ||
+        codeSamples[defaultLanguage as "javascript"];
 
     const setCode = useCodeStore((s) => s.setCode);
     const onChange = debounce((value?: string) => {
