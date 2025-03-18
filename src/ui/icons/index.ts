@@ -1,4 +1,9 @@
-export { GithubIcon, HomeIcon, RotateCcwIcon } from "lucide-react";
+export {
+    ArrowDownToLineIcon,
+    GithubIcon,
+    HomeIcon,
+    RotateCcwIcon,
+} from "lucide-react";
 export type { IconBaseProps, IconType } from "react-icons";
 export { AiFillCode as AiFillCodeIcon } from "react-icons/ai";
 export {

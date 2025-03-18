@@ -78,3 +78,11 @@ body {
         gap: 1rem;
     }
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px hsl(222.2 84% 4.9%) inset !important;
+    -webkit-text-fill-color: hsl(210 40% 98%);
+}
