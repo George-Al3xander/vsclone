@@ -1,5 +1,7 @@
 export {
     ArrowDownToLineIcon,
+    FileIcon,
+    FileOutputIcon,
     GithubIcon,
     HomeIcon,
     RotateCcwIcon,

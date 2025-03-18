@@ -1,3 +1,4 @@
+import { FileMenuItem } from "@/app/_components/menu/desktop/FileMenuItem";
 import { Button } from "@/ui/components/atoms/Button";
 import {
     DropdownMenu,
@@ -24,6 +25,10 @@ export const MenuDesktop = () => {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
+                <DropdownMenuGroup>
+                    <FileMenuItem />
+                </DropdownMenuGroup>
+                <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                     <SettingsMenuItem />
                 </DropdownMenuGroup>
