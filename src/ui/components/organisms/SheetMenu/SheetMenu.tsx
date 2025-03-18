@@ -17,12 +17,16 @@ type Props = PropsWithChildren<{
         wrapperProps?: ComponentProps<typeof Button>;
     };
     sheetTitle?: ReactNode;
+    sheetHeaderProps?: ComponentProps<typeof SheetHeader>;
+    sheetContentProps?: ComponentProps<typeof SheetContent>;
 }>;
 
 export const SheetMenu: FC<Props> = ({
     children,
     triggerProps: { iconProps, icon: TriggerIcon, srText, wrapperProps },
     sheetTitle,
+    sheetHeaderProps,
+    sheetContentProps,
 }) => {
     return (
         <Sheet>
@@ -32,9 +36,9 @@ export const SheetMenu: FC<Props> = ({
                     <TriggerIcon size={20} {...iconProps} />
                 </Button>
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent {...sheetContentProps}>
                 {sheetTitle && (
-                    <SheetHeader>
+                    <SheetHeader {...sheetHeaderProps}>
                         <SheetTitle>{sheetTitle}</SheetTitle>
                     </SheetHeader>
                 )}
