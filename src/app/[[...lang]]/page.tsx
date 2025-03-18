@@ -1,3 +1,4 @@
+import { Dialogs } from "@/app/_components/dialogs";
 import { DesktopView } from "@/app/_components/views/DesktopView";
 import MobileView from "@/app/_components/views/MobileView";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
@@ -28,6 +29,7 @@ export default function Home({}: PageProps) {
         <>
             <DesktopView />
             <MobileView />
+            <Dialogs />
         </>
     );
 }
