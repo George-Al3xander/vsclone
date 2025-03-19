@@ -5,14 +5,19 @@ import {
     DropdownMenuItem,
     SubmenuBlock,
 } from "@/ui/components/organisms/DropdownMenu";
-import { FileIcon, FileOutputIcon } from "@/ui/icons";
+import { FileIcon, FileInputIcon, FileOutputIcon, IconType } from "@/ui/icons";
+import { FC } from "react";
 
-const ExportBlock = () => {
-    const setIsOpen = useDialogsStore((s) => s.setIsExportOpen);
+const DialogBlock: FC<{
+    title: string;
+    icon: IconType;
+    storeActionKey: "setIsExportOpen" | "setIsImportOpen";
+}> = ({ title, icon: Icon, storeActionKey }) => {
+    const setIsOpen = useDialogsStore((s) => s[storeActionKey]);
     return (
         <DropdownMenuItem onClick={() => setIsOpen(true)}>
-            <FileOutputIcon />
-            <span>Export</span>
+            <Icon />
+            <span>{title}</span>
         </DropdownMenuItem>
     );
 };
@@ -20,7 +25,16 @@ const ExportBlock = () => {
 export const FileMenuItem = () => {
     return (
         <SubmenuBlock triggerIcon={FileIcon} triggerTitle="File">
-            <ExportBlock />
+            <DialogBlock
+                title="Import"
+                icon={FileInputIcon}
+                storeActionKey={"setIsImportOpen"}
+            />
+            <DialogBlock
+                title="Export"
+                icon={FileOutputIcon}
+                storeActionKey={"setIsExportOpen"}
+            />
         </SubmenuBlock>
     );
 };

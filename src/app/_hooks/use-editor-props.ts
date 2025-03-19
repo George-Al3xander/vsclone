@@ -18,7 +18,7 @@ export const useEditorProps = (
     defaultProps?: ComponentProps<typeof EditorMonaco>,
 ): ComponentProps<typeof EditorMonaco> => {
     const defaultLanguage = useLanguageParam();
-    const defaultValue =
+    const value =
         useCodeStore((s) => s.code) ||
         codeSamples[defaultLanguage as "javascript"];
 
@@ -38,7 +38,7 @@ export const useEditorProps = (
 
     return {
         defaultLanguage,
-        defaultValue,
+        value,
         onChange,
         theme,
         loading,
