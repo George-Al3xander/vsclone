@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguageParam } from "@/app/_hooks/use-language-param";
-import { codeStore } from "@/store/code-store";
+import { useCode, useCodeActions } from "@/store/code-store";
 import { IconTextBlock } from "@/ui/components/molecules/IconTextBlock";
 import { AiFillCodeIcon } from "@/ui/icons";
 import { cn } from "@/utils/cn";
@@ -18,11 +18,10 @@ export const useEditorProps = (
     defaultProps?: ComponentProps<typeof EditorMonaco>,
 ): ComponentProps<typeof EditorMonaco> => {
     const defaultLanguage = useLanguageParam();
-    const value =
-        codeStore((s) => s.code) ||
-        codeSamples[defaultLanguage as "javascript"];
 
-    const setCode = codeStore((s) => s.setCode);
+    const value = useCode() || codeSamples[defaultLanguage as "javascript"];
+    const { setCode } = useCodeActions();
+
     const onChange = debounce((value?: string) => {
         setCode(value || "");
     }, 500);

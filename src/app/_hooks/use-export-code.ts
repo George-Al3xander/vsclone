@@ -2,7 +2,7 @@
 
 import { useLanguageParam } from "@/app/_hooks/use-language-param";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
-import { codeStore } from "@/store/code-store";
+import { useCode } from "@/store/code-store";
 import { dialogsStore } from "@/store/dialogs-store";
 import { exportTextFile } from "@/utils/export-text-file";
 import { ChangeEvent, useState } from "react";
@@ -11,7 +11,7 @@ import codeSamples from "../../../public/json/codeSamples.json";
 
 export const useExportCode = () => {
     const language = useLanguageParam();
-    const code = codeStore((s) => s.code);
+    const code = useCode();
     const { extension } = LANGUAGES_CONFIG[language as "cpp"];
 
     const setIsOpen = dialogsStore((s) => s.setIsExportOpen);
