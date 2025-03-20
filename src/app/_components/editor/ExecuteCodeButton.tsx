@@ -1,13 +1,13 @@
 "use client";
 
 import { useExecuteCode } from "@/app/_hooks/use-execute-code";
-import { mobileTabsStore } from "@/store/mobile-tabs-store";
+import { useMobileTabsActions } from "@/store/mobile-tabs-store";
 import { Button } from "@/ui/components/atoms/Button";
 import { VscLoadingIcon, VscPlayIcon } from "@/ui/icons";
 
 export const ExecuteCodeButton = () => {
     const { executeCode: execCode, isCompiling } = useExecuteCode();
-    const setTab = mobileTabsStore((s) => s.setTab);
+    const { setTab } = useMobileTabsActions();
 
     const executeCode = async () => {
         await execCode();
