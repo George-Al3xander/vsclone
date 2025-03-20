@@ -2,8 +2,8 @@
 
 import {
     OutputSettings,
-    useOutputPositionDesktop,
-} from "@/store/use-output-position-desktop";
+    outputPositionDesktopStore,
+} from "@/store/output-position-desktop-store";
 import {
     DropdownMenuItem,
     DropdownMenuLabel,
@@ -22,8 +22,8 @@ const outputPositions: OutputSettings["outputPosition"][] = [
 ];
 
 const PositionBlock: FC<{ isHidden: boolean }> = ({ isHidden }) => {
-    const outputPosition = useOutputPositionDesktop((s) => s.outputPosition);
-    const setOutputPosition = useOutputPositionDesktop(
+    const outputPosition = outputPositionDesktopStore((s) => s.outputPosition);
+    const setOutputPosition = outputPositionDesktopStore(
         (s) => s.setOutputPosition,
     );
 
@@ -48,8 +48,8 @@ const PositionBlock: FC<{ isHidden: boolean }> = ({ isHidden }) => {
 };
 
 export const SettingsMenuItem = () => {
-    const isHidden = useOutputPositionDesktop((s) => s.isHidden);
-    const toggleOutputVisibility = useOutputPositionDesktop(
+    const isHidden = outputPositionDesktopStore((s) => s.isHidden);
+    const toggleOutputVisibility = outputPositionDesktopStore(
         (s) => s.toggleOutputVisibility,
     );
 

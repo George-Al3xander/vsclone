@@ -1,12 +1,12 @@
 "use client";
 
 import { ExportCodeForm } from "@/app/_components/forms/ExportCodeForm";
-import { useDialogsStore } from "@/store/use-dialogs-store";
+import { dialogsStore } from "@/store/dialogs-store";
 import { ResponsiveDialog } from "@/ui/components/organisms/ResponsiveDialog";
 
 export const ExportCodeDialog = () => {
-    const isOpen = useDialogsStore((s) => s.isExportOpen);
-    const setIsOpen = useDialogsStore((s) => s.setIsExportOpen);
+    const isOpen = dialogsStore((s) => s.isExportOpen);
+    const setIsOpen = dialogsStore((s) => s.setIsExportOpen);
     return (
         <ResponsiveDialog
             isOpen={isOpen}

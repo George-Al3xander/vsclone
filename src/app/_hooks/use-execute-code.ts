@@ -2,20 +2,20 @@
 
 import { useLanguageParam } from "@/app/_hooks/use-language-param";
 import * as internalApi from "@/services/api/internal";
-import { useCodeStore } from "@/store/use-code-store";
+import { codeStore } from "@/store/code-store";
 import { AxiosError } from "axios";
 
 export const useExecuteCode = () => {
     const language = useLanguageParam();
 
-    const code = useCodeStore((state) => state.code);
+    const code = codeStore((state) => state.code);
 
-    const setCompilationOutput = useCodeStore(
+    const setCompilationOutput = codeStore(
         (state) => state.setCompilationOutput,
     );
 
-    const isCompiling = useCodeStore((state) => state.isCompiling);
-    const setIsCompiling = useCodeStore((state) => state.setIsCompiling);
+    const isCompiling = codeStore((state) => state.isCompiling);
+    const setIsCompiling = codeStore((state) => state.setIsCompiling);
 
     const executeCode = async () => {
         setIsCompiling(true);

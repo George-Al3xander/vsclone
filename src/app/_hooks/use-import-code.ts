@@ -1,8 +1,8 @@
 "use client";
 
 import { LANGUAGES_CONFIG } from "@/configs/languages";
-import { useCodeStore } from "@/store/use-code-store";
-import { useDialogsStore } from "@/store/use-dialogs-store";
+import { codeStore } from "@/store/code-store";
+import { dialogsStore } from "@/store/dialogs-store";
 import { ChangeEvent, useState } from "react";
 import { toast } from "sonner";
 
@@ -15,8 +15,8 @@ const acceptString = `${ALLOWED_EXTENSIONS.map((w) => "." + w).join(",")}.`;
 export const useImportsCode = () => {
     const [tempCode, setTempCode] = useState<string>("");
     const [isValid, setValid] = useState<boolean>(false);
-    const setCode = useCodeStore((s) => s.setCode);
-    const setIsOpen = useDialogsStore((s) => s.setIsImportOpen);
+    const setCode = codeStore((s) => s.setCode);
+    const setIsOpen = dialogsStore((s) => s.setIsImportOpen);
 
     const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
         try {

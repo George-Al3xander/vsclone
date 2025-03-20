@@ -1,6 +1,6 @@
 "use client";
 
-import { useDialogsStore } from "@/store/use-dialogs-store";
+import { dialogsStore } from "@/store/dialogs-store";
 import {
     DropdownMenuItem,
     SubmenuBlock,
@@ -13,7 +13,7 @@ const DialogBlock: FC<{
     icon: IconType;
     storeActionKey: "setIsExportOpen" | "setIsImportOpen";
 }> = ({ title, icon: Icon, storeActionKey }) => {
-    const setIsOpen = useDialogsStore((s) => s[storeActionKey]);
+    const setIsOpen = dialogsStore((s) => s[storeActionKey]);
     return (
         <DropdownMenuItem onClick={() => setIsOpen(true)}>
             <Icon />

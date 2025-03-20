@@ -12,7 +12,7 @@ export type CodeState = {
     clearCompilationOutput: () => void;
 };
 
-export const useCodeStore = create<CodeState>()(
+export const codeStore = create<CodeState>()(
     persist(
         (set) => ({
             code: "",

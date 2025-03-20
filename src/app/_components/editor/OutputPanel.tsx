@@ -1,6 +1,6 @@
 "use client";
 
-import { useCodeStore } from "@/store/use-code-store";
+import { codeStore } from "@/store/code-store";
 import { Button } from "@/ui/components/atoms/Button";
 import { ScrollArea } from "@/ui/components/atoms/ScrollArea";
 import { RxCross1Icon } from "@/ui/icons";
@@ -14,10 +14,8 @@ type Props = {
 };
 
 export const OutputPanel: FC<Props> = ({ wrapperProps, scrollAreaProps }) => {
-    const output = useCodeStore((s) => s.compilationOutput);
-    const clearCompilationOutput = useCodeStore(
-        (s) => s.clearCompilationOutput,
-    );
+    const output = codeStore((s) => s.compilationOutput);
+    const clearCompilationOutput = codeStore((s) => s.clearCompilationOutput);
 
     const lines: string[] | null = output?.split("\n").filter(Boolean) || null;
 

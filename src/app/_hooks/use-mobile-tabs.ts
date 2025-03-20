@@ -1,8 +1,8 @@
-import { useMobileTabsStore } from "@/store/use-mobile-tabs-store";
+import { mobileTabsStore } from "@/store/mobile-tabs-store";
 
 export const useMobileTabs = () => {
-    const tab = useMobileTabsStore((s) => s.tab);
-    const onTabChange = useMobileTabsStore((s) => s.setTab);
+    const tab = mobileTabsStore((s) => s.tab);
+    const onTabChange = mobileTabsStore((s) => s.setTab);
 
     return { tab, onTabChange };
 };

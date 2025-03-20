@@ -12,7 +12,7 @@ export type OutputSettings = {
     toggleOutputVisibility: () => void;
 };
 
-export const useOutputPositionDesktop = create<OutputSettings>()(
+export const outputPositionDesktopStore = create<OutputSettings>()(
     persist(
         (set) => ({
             isHidden: false,

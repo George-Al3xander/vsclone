@@ -5,7 +5,7 @@ export type MobileTabsStore = {
     setTab: (tab: string) => void;
 };
 
-export const useMobileTabsStore = create<MobileTabsStore>()((set) => ({
+export const mobileTabsStore = create<MobileTabsStore>()((set) => ({
     tab: "editor",
     setTab: (tab) => set({ tab }),
 }));

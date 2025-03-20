@@ -7,7 +7,7 @@ export type DialogsStore = {
     setIsImportOpen: (b: boolean) => void;
 };
 
-export const useDialogsStore = create<DialogsStore>()((set) => ({
+export const dialogsStore = create<DialogsStore>()((set) => ({
     isExportOpen: false,
     setIsExportOpen: (b) => set({ isExportOpen: b }),
     isImportOpen: false,
