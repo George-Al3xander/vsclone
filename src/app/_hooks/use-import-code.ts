@@ -2,7 +2,7 @@
 
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import { useCodeActions } from "@/store/code-store";
-import { dialogsStore } from "@/store/dialogs-store";
+import { useDialogsActions } from "@/store/dialogs-store";
 import { ChangeEvent, useState } from "react";
 import { toast } from "sonner";
 
@@ -16,7 +16,8 @@ export const useImportsCode = () => {
     const [tempCode, setTempCode] = useState<string>("");
     const [isValid, setValid] = useState<boolean>(false);
     const { setCode } = useCodeActions();
-    const setIsOpen = dialogsStore((s) => s.setIsImportOpen);
+
+    const { setIsImportOpen } = useDialogsActions();
 
     const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
         try {
@@ -55,7 +56,7 @@ export const useImportsCode = () => {
 
     const importFile = () => {
         setCode(tempCode);
-        setIsOpen(false);
+        setIsImportOpen(false);
         toast.success("File Imported Successfully", {
             description: "File has been imported and set as the current code.",
         });

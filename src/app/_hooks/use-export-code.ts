@@ -3,7 +3,7 @@
 import { useLanguageParam } from "@/app/_hooks/use-language-param";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import { useCode } from "@/store/code-store";
-import { dialogsStore } from "@/store/dialogs-store";
+import { useDialogsActions } from "@/store/dialogs-store";
 import { exportTextFile } from "@/utils/export-text-file";
 import { ChangeEvent, useState } from "react";
 import { toast } from "sonner";
@@ -14,7 +14,7 @@ export const useExportCode = () => {
     const code = useCode();
     const { extension } = LANGUAGES_CONFIG[language as "cpp"];
 
-    const setIsOpen = dialogsStore((s) => s.setIsExportOpen);
+    const { setIsExportOpen } = useDialogsActions();
 
     const [fileName, setFileName] = useState<string>("");
 
@@ -33,7 +33,7 @@ export const useExportCode = () => {
         const description = `${name} ${success ? "has been downloaded and is ready for use." : "could not be downloaded. Please try again."}`;
         const toastType = success ? "success" : "error";
 
-        if (success) setIsOpen(false);
+        if (success) setIsExportOpen(false);
 
         toast[toastType](title, {
             description,

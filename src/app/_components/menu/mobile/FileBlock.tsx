@@ -1,6 +1,6 @@
 "use client";
 
-import { dialogsStore } from "@/store/dialogs-store";
+import { DialogsActions, useDialogsActions } from "@/store/dialogs-store";
 import {
     dropdownMenuItemBaseStyles,
     dropdownMenuLabelBaseStyles,
@@ -13,9 +13,9 @@ import { FC } from "react";
 const DialogBlock: FC<{
     title: string;
     icon: IconType;
-    storeActionKey: "setIsExportOpen" | "setIsImportOpen";
+    storeActionKey: keyof DialogsActions;
 }> = ({ title, icon: Icon, storeActionKey }) => {
-    const setOpen = dialogsStore((s) => s[storeActionKey]);
+    const setOpen = useDialogsActions()[storeActionKey];
     return (
         <SheetClose onClick={() => setOpen(true)} asChild>
             <li

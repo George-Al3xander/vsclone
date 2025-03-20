@@ -1,15 +1,25 @@
 import { create } from "zustand";
 
-export type DialogsStore = {
-    isExportOpen: boolean;
+export type DialogsActions = {
     setIsExportOpen: (b: boolean) => void;
-    isImportOpen: boolean;
     setIsImportOpen: (b: boolean) => void;
 };
 
-export const dialogsStore = create<DialogsStore>()((set) => ({
+export type DialogsState = {
+    isExportOpen: boolean;
+    isImportOpen: boolean;
+    actions: DialogsActions;
+};
+
+const dialogsStore = create<DialogsState>()((set) => ({
     isExportOpen: false,
-    setIsExportOpen: (b) => set({ isExportOpen: b }),
     isImportOpen: false,
-    setIsImportOpen: (b) => set({ isImportOpen: b }),
+    actions: {
+        setIsExportOpen: (b) => set({ isExportOpen: b }),
+        setIsImportOpen: (b) => set({ isImportOpen: b }),
+    },
 }));
+
+export const useIsExportOpen = () => dialogsStore((s) => s.isExportOpen);
+export const useIsImportOpen = () => dialogsStore((s) => s.isImportOpen);
+export const useDialogsActions = () => dialogsStore((s) => s.actions);

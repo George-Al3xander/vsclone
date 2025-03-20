@@ -2,7 +2,7 @@
 
 import { ImportCodeForm } from "@/app/_components/forms/ImportCodeForm";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
-import { dialogsStore } from "@/store/dialogs-store";
+import { useDialogsActions, useIsImportOpen } from "@/store/dialogs-store";
 import { ResponsiveDialog } from "@/ui/components/organisms/ResponsiveDialog";
 
 const acceptString = Object.values(LANGUAGES_CONFIG)
@@ -10,12 +10,12 @@ const acceptString = Object.values(LANGUAGES_CONFIG)
     .join(", ");
 
 export const ImportCodeDialog = () => {
-    const isOpen = dialogsStore((s) => s.isImportOpen);
-    const setIsOpen = dialogsStore((s) => s.setIsImportOpen);
+    const isOpen = useIsImportOpen();
+    const { setIsImportOpen } = useDialogsActions();
     return (
         <ResponsiveDialog
             isOpen={isOpen}
-            setIsOpen={setIsOpen}
+            setIsOpen={setIsImportOpen}
             title="Import File"
             description={`Supported extensions: ${acceptString}.`}
         >

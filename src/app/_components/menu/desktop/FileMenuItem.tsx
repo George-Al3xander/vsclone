@@ -1,6 +1,6 @@
 "use client";
 
-import { dialogsStore } from "@/store/dialogs-store";
+import { DialogsActions, useDialogsActions } from "@/store/dialogs-store";
 import {
     DropdownMenuItem,
     SubmenuBlock,
@@ -11,11 +11,11 @@ import { FC } from "react";
 const DialogBlock: FC<{
     title: string;
     icon: IconType;
-    storeActionKey: "setIsExportOpen" | "setIsImportOpen";
+    storeActionKey: keyof DialogsActions;
 }> = ({ title, icon: Icon, storeActionKey }) => {
-    const setIsOpen = dialogsStore((s) => s[storeActionKey]);
+    const setOpen = useDialogsActions()[storeActionKey];
     return (
-        <DropdownMenuItem onClick={() => setIsOpen(true)}>
+        <DropdownMenuItem onClick={() => setOpen(true)}>
             <Icon />
             <span>{title}</span>
         </DropdownMenuItem>
