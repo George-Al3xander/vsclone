@@ -1,13 +1,16 @@
 "use client";
 
-import { outputPositionDesktopStore } from "@/store/output-position-desktop-store";
+import {
+    useIsHidden,
+    useOutputPosition,
+} from "@/store/output-position-desktop-store";
 import { cn } from "@/utils/cn";
 import { Editor } from "./Editor";
 import { OutputPanel } from "./OutputPanel";
 
 export const EditingAreaDesktop = () => {
-    const outputPosition = outputPositionDesktopStore((s) => s.outputPosition);
-    const isHidden = outputPositionDesktopStore((s) => s.isHidden);
+    const outputPosition = useOutputPosition();
+    const isHidden = useIsHidden();
     const isHorizontal = Boolean(
         outputPosition == "right" || outputPosition == "left",
     );

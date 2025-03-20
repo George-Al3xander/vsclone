@@ -1,8 +1,10 @@
 "use client";
 
 import {
-    OutputSettings,
-    outputPositionDesktopStore,
+    OutputSettingsState,
+    useIsHidden,
+    useOutputPosition,
+    useOutputSettingsActions,
 } from "@/store/output-position-desktop-store";
 import {
     DropdownMenuItem,
@@ -14,7 +16,7 @@ import {
 import { VscEyeClosedIcon, VscEyeIcon, VscSettingsGearIcon } from "@/ui/icons";
 import { FC } from "react";
 
-const outputPositions: OutputSettings["outputPosition"][] = [
+const outputPositions: OutputSettingsState["outputPosition"][] = [
     "top",
     "bottom",
     "right",
@@ -22,10 +24,8 @@ const outputPositions: OutputSettings["outputPosition"][] = [
 ];
 
 const PositionBlock: FC<{ isHidden: boolean }> = ({ isHidden }) => {
-    const outputPosition = outputPositionDesktopStore((s) => s.outputPosition);
-    const setOutputPosition = outputPositionDesktopStore(
-        (s) => s.setOutputPosition,
-    );
+    const outputPosition = useOutputPosition();
+    const { setOutputPosition } = useOutputSettingsActions();
 
     return (
         <>
@@ -48,10 +48,8 @@ const PositionBlock: FC<{ isHidden: boolean }> = ({ isHidden }) => {
 };
 
 export const SettingsMenuItem = () => {
-    const isHidden = outputPositionDesktopStore((s) => s.isHidden);
-    const toggleOutputVisibility = outputPositionDesktopStore(
-        (s) => s.toggleOutputVisibility,
-    );
+    const isHidden = useIsHidden();
+    const { toggleOutputVisibility } = useOutputSettingsActions();
 
     return (
         <SubmenuBlock triggerTitle="Settings" triggerIcon={VscSettingsGearIcon}>
