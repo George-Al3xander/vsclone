@@ -1,11 +1,10 @@
 "use client";
 
-import { useCodeActions, useCompilingOutput } from "@/store/code-store";
-import { Button } from "@/ui/components/atoms/Button";
+import { useCompilingOutput } from "@/store/code-store";
 import { ScrollArea } from "@/ui/components/atoms/ScrollArea";
-import { RxCross1Icon } from "@/ui/icons";
 import { cn } from "@/utils/cn";
 import { ComponentProps, FC, HTMLAttributes } from "react";
+import { ClearOutputButton } from "./ClearOutputButton";
 import { ExecuteCodeButton } from "./ExecuteCodeButton";
 
 type Props = {
@@ -15,7 +14,6 @@ type Props = {
 
 export const OutputPanel: FC<Props> = ({ wrapperProps, scrollAreaProps }) => {
     const output = useCompilingOutput();
-    const { clearCompilationOutput } = useCodeActions();
 
     const lines: string[] | null = output?.split("\n").filter(Boolean) || null;
 
@@ -28,14 +26,7 @@ export const OutputPanel: FC<Props> = ({ wrapperProps, scrollAreaProps }) => {
             )}
         >
             <div className="ml-auto h-[max-content] w-[max-content] rounded-md bg-primary px-2">
-                <Button
-                    variant="ghost"
-                    onClick={clearCompilationOutput}
-                    size="icon"
-                >
-                    <span className="sr-only">Clear output</span>
-                    <RxCross1Icon size={20} />
-                </Button>
+                <ClearOutputButton />
                 <ExecuteCodeButton />
             </div>
             <ScrollArea
