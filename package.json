@@ -1,16 +1,16 @@
 {
-    "name": "next-template",
+    "name": "vsclone",
     "version": "0.1.0",
     "private": true,
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build",
         "start": "next start",
-        "test": "vitest",
+        "test": "vitest --run",
         "lint": "next lint",
         "format": "pnpm exec prettier --write",
         "prepare": "husky",
-        "pre-commit": "lint-staged"
+        "pre-commit": "lint-staged && pnpm test"
     },
     "dependencies": {
         "@monaco-editor/react": "^4.7.0",
