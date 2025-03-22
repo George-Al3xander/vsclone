@@ -1,14 +1,15 @@
 import { FileMenuItem } from "@/app/_components/menu/desktop/FileMenuItem";
+import { GitHubLinkBase } from "@/app/_components/shared/GitHubLinkBase";
 import { Button } from "@/ui/components/atoms/Button";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuGroup,
+    DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/ui/components/organisms/DropdownMenu";
 import { VscMenuIcon } from "@/ui/icons";
-import { GitHubMenuItem } from "./GitHubMenuItem";
 import { SettingsMenuItem } from "./SettingsMenuItem";
 
 export const MenuDesktop = () => {
@@ -33,7 +34,9 @@ export const MenuDesktop = () => {
                     <SettingsMenuItem />
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
-                <GitHubMenuItem />
+                <DropdownMenuItem asChild>
+                    <GitHubLinkBase />
+                </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     );

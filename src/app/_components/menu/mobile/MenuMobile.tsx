@@ -1,4 +1,5 @@
 import { FileBlock } from "@/app/_components/menu/mobile/FileBlock";
+import { GitHubMenuItem } from "@/app/_components/menu/mobile/GitHubMenuItem";
 import { LanguagesBlock } from "@/app/_components/menu/mobile/LanguagesBlock";
 import { Logo } from "@/app/_components/shared/Logo";
 import { Separator } from "@/ui/components/atoms/Separator";
@@ -42,5 +43,9 @@ export const MenuMobile = () => (
                 <LanguagesBlock />
             </TabsContent>
         </Tabs>
+        <Separator className={dropdownMenuSeparatorBaseStyles} />
+        <div className="px-4">
+            <GitHubMenuItem />
+        </div>
     </SheetMenu>
 );
