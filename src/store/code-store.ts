@@ -1,5 +1,7 @@
+import { useLanguageParam } from "@/app/_hooks/use-language-param";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import codeSamples from "../../public/json/codeSamples.json";
 
 export type CodeActions = {
     setCode: (code: string) => void;
@@ -9,7 +11,7 @@ export type CodeActions = {
 };
 
 export type CodeState = {
-    code: string;
+    code: string | null;
     compilationOutput: string | null;
     isCompiling: boolean;
     actions: CodeActions;
@@ -18,7 +20,7 @@ export type CodeState = {
 const codeStore = create<CodeState>()(
     persist(
         (set) => ({
-            code: "",
+            code: null,
             compilationOutput: null,
             isCompiling: false,
             actions: {
@@ -37,7 +39,14 @@ const codeStore = create<CodeState>()(
     ),
 );
 
-export const useCode = () => codeStore((s) => s.code);
+export const useCode = () => {
+    const language = useLanguageParam() as "cpp";
+
+    const storageCode = codeStore((s) => s.code);
+    const sampleCode = codeSamples[language];
+
+    return storageCode ?? sampleCode;
+};
 export const useCompilingOutput = () => codeStore((s) => s.compilationOutput);
 export const useIsCompiling = () => codeStore((s) => s.isCompiling);
 export const useCodeActions = () => codeStore((s) => s.actions);
