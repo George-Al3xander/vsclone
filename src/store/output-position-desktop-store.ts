@@ -31,6 +31,10 @@ const outputPositionDesktopStore = create<OutputSettingsState>()(
         }),
         {
             name: "output-settings-storage",
+            partialize: (state) => ({
+                outputPosition: state.outputPosition,
+                isHidden: state.outputPosition,
+            }),
         },
     ),
 );
