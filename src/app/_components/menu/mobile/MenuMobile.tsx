@@ -17,7 +17,7 @@ export const MenuMobile = () => (
     <SheetMenu
         sheetTitle={<Logo />}
         triggerProps={{
-            srText: "Open mobile menu",
+            srText: "Open menu",
             icon: VscMenuIcon,
             wrapperProps: {
                 className: "sm:hidden",

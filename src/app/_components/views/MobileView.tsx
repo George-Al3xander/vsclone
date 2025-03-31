@@ -24,7 +24,7 @@ const menuTabs: {
         content: <OutputPanel />,
     },
 ];
-function MobileMainTabs() {
+export const MobileView = () => {
     const { tab, onTabChange } = useMobileTabs();
 
     return (
@@ -48,6 +48,4 @@ function MobileMainTabs() {
             ))}
         </Tabs>
     );
-}
-
-export default MobileMainTabs;
+};
