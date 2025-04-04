@@ -2,7 +2,7 @@
 
 import {
     OutputSettingsState,
-    useIsHidden,
+    useIsOutputHidden,
     useOutputPosition,
     useOutputSettingsActions,
 } from "@/store/output-position-desktop-store";
@@ -48,7 +48,7 @@ const PositionBlock: FC<{ isHidden: boolean }> = ({ isHidden }) => {
 };
 
 export const SettingsMenuItem = () => {
-    const isHidden = useIsHidden();
+    const isOutputHidden = useIsOutputHidden();
     const { toggleOutputVisibility } = useOutputSettingsActions();
 
     return (
@@ -56,10 +56,10 @@ export const SettingsMenuItem = () => {
             <DropdownMenuLabel>Editor options </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={toggleOutputVisibility}>
-                {isHidden ? <VscEyeIcon /> : <VscEyeClosedIcon />}
-                <span>{isHidden ? "Show" : "Hide"} terminal</span>
+                {isOutputHidden ? <VscEyeIcon /> : <VscEyeClosedIcon />}
+                <span>{isOutputHidden ? "Show" : "Hide"} terminal</span>
             </DropdownMenuItem>
-            <PositionBlock isHidden={isHidden} />
+            <PositionBlock isHidden={isOutputHidden} />
         </SubmenuBlock>
     );
 };

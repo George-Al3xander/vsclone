@@ -39,7 +39,8 @@ const outputPositionDesktopStore = create<OutputSettingsState>()(
     ),
 );
 
-export const useIsHidden = () => outputPositionDesktopStore((s) => s.isHidden);
+export const useIsOutputHidden = () =>
+    outputPositionDesktopStore((s) => s.isHidden);
 export const useOutputPosition = () =>
     outputPositionDesktopStore((s) => s.outputPosition);
 export const useOutputSettingsActions = () =>
