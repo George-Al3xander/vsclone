@@ -1,4 +1,4 @@
-import { useLanguageParam } from "@/app/_hooks/use-language-param";
+import { useLanguageParam } from "@/app/_hooks/language/use-language-param";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import {
     CppIcon,

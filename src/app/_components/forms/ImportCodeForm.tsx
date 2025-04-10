@@ -1,6 +1,6 @@
 "use client";
 
-import { useImportsCode } from "@/app/_hooks/use-import-code";
+import { useImportsCode } from "@/app/_hooks/code/use-import-code";
 import { Button } from "@/ui/components/atoms/Button";
 import { Input } from "@/ui/components/atoms/Input";
 

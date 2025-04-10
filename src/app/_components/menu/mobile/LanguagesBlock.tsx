@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguages } from "@/app/_hooks/use-languages";
+import { useLanguages } from "@/app/_hooks/language/use-languages";
 import { dropdownMenuItemBaseStyles } from "@/ui/components/organisms/DropdownMenu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";

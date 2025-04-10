@@ -1,6 +1,6 @@
 "use client";
 
-import { useExportCode } from "@/app/_hooks/use-export-code";
+import { useExportCode } from "@/app/_hooks/code/use-export-code";
 import { Button } from "@/ui/components/atoms/Button";
 import { Input } from "@/ui/components/atoms/Input";
 import { Label } from "@/ui/components/atoms/Label";

@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguages } from "@/app/_hooks/use-languages";
+import { useLanguages } from "@/app/_hooks/language/use-languages";
 import { ScrollArea } from "@/ui/components/atoms/ScrollArea";
 import { cn } from "@/utils/cn";
 import Link from "next/link";

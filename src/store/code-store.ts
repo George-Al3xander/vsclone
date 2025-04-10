@@ -1,4 +1,4 @@
-import { useLanguageParam } from "@/app/_hooks/use-language-param";
+import { useLanguageParam } from "@/app/_hooks/language/use-language-param";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import codeSamples from "../../public/json/codeSamples.json";

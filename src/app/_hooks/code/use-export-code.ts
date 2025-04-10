@@ -1,13 +1,13 @@
 "use client";
 
-import { useLanguageParam } from "@/app/_hooks/use-language-param";
+import { useLanguageParam } from "@/app/_hooks/language/use-language-param";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import { useCode } from "@/store/code-store";
 import { useDialogsActions } from "@/store/dialogs-store";
 import { exportTextFile } from "@/utils/export-text-file";
 import { ChangeEvent, useState } from "react";
 import { toast } from "sonner";
-import codeSamples from "../../../public/json/codeSamples.json";
+import codeSamples from "../../../../public/json/codeSamples.json";
 
 export const useExportCode = () => {
     const language = useLanguageParam();

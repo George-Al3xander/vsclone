@@ -1,6 +1,6 @@
 import { vi } from "vitest";
 
-vi.mock("@/app/_hooks/use-language-param", () => ({
+vi.mock("@/app/_hooks/language/use-language-param", () => ({
     useLanguageParam: vi.fn().mockReturnValue("javascript"),
 }));
 

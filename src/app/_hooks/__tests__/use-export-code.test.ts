@@ -1,4 +1,4 @@
-import { useExportCode } from "@/app/_hooks/use-export-code";
+import { useExportCode } from "@/app/_hooks/code/use-export-code";
 import { setIsExportOpen } from "@/mocks/mock-dialog-actions";
 import * as codeStore from "@/store/code-store";
 import * as exportFileRoot from "@/utils/export-text-file";

@@ -1,6 +1,6 @@
 "use client";
 
-import { useExecuteCode } from "@/app/_hooks/use-execute-code";
+import { useExecuteCode } from "@/app/_hooks/code/use-execute-code";
 import { useMobileTabsActions } from "@/store/mobile-tabs-store";
 import { Button } from "@/ui/components/atoms/Button";
 import { VscLoadingIcon, VscPlayIcon } from "@/ui/icons";
