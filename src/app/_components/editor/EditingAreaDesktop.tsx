@@ -38,7 +38,7 @@ export const EditingAreaDesktop = () => {
                     ),
                 }}
                 wrapperProps={{
-                    className: cn({
+                    className: cn("z-10", {
                         "sm:w-[70%]": isHorizontal && !isOutputHidden,
                         "sm:w-[100%]": isOutputHidden,
                     }),
