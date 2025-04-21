@@ -1,4 +1,5 @@
 import { setCompilationOutput } from "@/mocks/mock-code-actions";
+import { mockExecuteCode } from "@/mocks/mock-internal-client";
 import * as internalApi from "@/services/api/internal";
 import { renderHook } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -17,20 +18,10 @@ describe("Execute code hook", () => {
         vi.clearAllMocks();
     });
     it("should execute code successfully", async () => {
-        executeCodeSpy.mockReturnValueOnce(
-            // Too much effort required to mock the whole AxiosResponse type.
-            //eslint-disable-next-line
-            //@ts-ignore
-            Promise.resolve({
-                data: {
-                    run: {
-                        output: "Execution result",
-                    },
-                },
-            }),
-        );
+        const text = "Execution result";
+        mockExecuteCode(text);
         await compileCode();
-        expect(setCompilationOutput).toHaveBeenCalledWith("Execution result");
+        expect(setCompilationOutput).toHaveBeenCalledWith(text);
     });
 
     it("shouldn't execute code successfully", async () => {
@@ -44,17 +35,8 @@ describe("Execute code hook", () => {
     });
 
     it("should set a correct error message", async () => {
-        executeCodeSpy.mockReturnValueOnce(
-            //eslint-disable-next-line
-            //@ts-ignore
-            Promise.resolve({
-                data: {
-                    run: {
-                        stderr: "Oops!",
-                    },
-                },
-            }),
-        );
+        const text = "Oops!";
+        mockExecuteCode(text, true);
         await compileCode();
         expect(setCompilationOutput).toHaveBeenCalledWith("Oops!");
     });
