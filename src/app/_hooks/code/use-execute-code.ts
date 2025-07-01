@@ -3,7 +3,6 @@
 import { useLanguageParam } from "@/app/_hooks/language/use-language-param";
 import * as internalApi from "@/services/api/internal";
 import { useCode, useCodeActions, useIsCompiling } from "@/store/code-store";
-import { AxiosError } from "axios";
 
 export const useExecuteCode = () => {
     const language = useLanguageParam();
@@ -26,7 +25,7 @@ export const useExecuteCode = () => {
 
             setCompilationOutput(data.run.output);
         } catch (e) {
-            if (e instanceof AxiosError || e instanceof Error) {
+            if (e instanceof Error) {
                 setCompilationOutput(e.message);
             } else {
                 setCompilationOutput("Something went wrong");

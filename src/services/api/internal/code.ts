@@ -1,6 +1,5 @@
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import { internalClient } from "@/services/libs/internalClient";
-import { AxiosResponse } from "axios";
 
 const LANGUAGES = Object.keys(LANGUAGES_CONFIG);
 const URL = "/execute";
@@ -26,7 +25,7 @@ export const execute = async ({
 }: {
     code: string;
     language: string;
-}): Promise<AxiosResponse<ExecuteResponse, unknown>> => {
+}): Promise<{ data: ExecuteResponse }> => {
     if (!LANGUAGES.includes(language))
         throw new Error("Invalid language provided");
 

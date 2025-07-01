@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "redaxios";
 
 export const BASE_URL = "https://emkc.org/api/v2/piston";
 
