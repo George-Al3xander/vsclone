@@ -1,6 +1,6 @@
 "use client";
 
-import { GitHubLinkBase } from "@/app/_components/shared/GitHubLinkBase";
+import { GitHubLinkBase } from "@/app/(common)";
 import { dropdownMenuItemBaseStyles } from "@/ui/components/organisms/DropdownMenu";
 import { SheetClose } from "@/ui/components/organisms/Sheet";
 import { cn } from "@/utils/cn";

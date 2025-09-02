@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom/vitest";
 import { vi } from "vitest";
 
-vi.mock("@/app/_hooks/language/use-language-param", () => ({
+vi.mock("@/app/(language)/_hooks/use-language-param", () => ({
     useLanguageParam: vi.fn().mockReturnValue("javascript"),
 }));
 

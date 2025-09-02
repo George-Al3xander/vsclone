@@ -1,9 +1,9 @@
+import { Logo } from "@/app/(common)";
 import { DesktopMenu } from "@/app/(desktop)";
 import { ExecuteCodeButton } from "@/app/(execute-code)";
 import { ExportCodeDialog } from "@/app/(export-code)";
 import { ImportCodeDialog } from "@/app/(import-code)";
 import { MobileMenu } from "@/app/(mobile)";
-import { Logo } from "@/app/_components/shared/Logo";
 import { Providers } from "@/providers";
 import "@/styles/main.css";
 import { LayoutProps } from "@/types/app";
