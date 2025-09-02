@@ -13,7 +13,7 @@ import {
 } from "@/ui/components/organisms/Tabs";
 import { VscMenuIcon } from "@/ui/icons";
 
-export const MenuMobile = () => (
+export const MobileMenu = () => (
     <SheetMenu
         sheetTitle={<Logo />}
         triggerProps={{

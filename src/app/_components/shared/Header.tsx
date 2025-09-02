@@ -1,6 +1,6 @@
+import { MobileMenu } from "@/app/(mobile)/_components/MobileMenu";
 import { ExecuteCodeButton } from "@/app/_components/editor/ExecuteCodeButton";
 import { MenuDesktop } from "@/app/_components/menu/desktop/MenuDesktop";
-import { MenuMobile } from "@/app/_components/menu/mobile/MenuMobile";
 import { Logo } from "./Logo";
 
 export const Header = () => (
@@ -8,7 +8,7 @@ export const Header = () => (
         <Logo />
         <div className="ml-auto">
             <MenuDesktop />
-            <MenuMobile />
+            <MobileMenu />
             <ExecuteCodeButton />
         </div>
     </>
