@@ -1,4 +1,4 @@
-import { metadataConfig } from "@/configs/metadata";
+import { baseMetadata } from "@/configs/metadata";
 import { VscVscodeIcon } from "@/ui/icons";
 import { cn } from "@/utils/cn";
 
@@ -12,7 +12,7 @@ export const Logo = ({ size = "md" }: { size?: "sm" | "md" | "lg" }) => {
             })}
         >
             <VscVscodeIcon />
-            <h1> {metadataConfig.title as string}</h1>
+            <h1>{baseMetadata.title as string}</h1>
         </div>
     );
 };

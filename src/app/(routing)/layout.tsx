@@ -12,7 +12,7 @@ import { LayoutProps } from "@/types/app";
 import { TemplateScaffold } from "@/ui/components/templates/Scaffold";
 import { inter } from "@/ui/fonts";
 
-export { metadataConfig as metadata } from "@/configs/metadata";
+export { baseMetadata as metadata } from "@/configs/metadata";
 
 export default function RootLayout({ children }: LayoutProps) {
     return (

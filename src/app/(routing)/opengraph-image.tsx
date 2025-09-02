@@ -1,19 +1,19 @@
 import { LANGUAGES_CONFIG } from "@/configs/languages";
-import { metadataConfig } from "@/configs/metadata";
+import { baseMetadata } from "@/configs/metadata";
 import { VsCodeIconRaw } from "@/ui/icons";
 import { getLocalFont } from "@/utils/get-local-font";
 import { ImageResponse } from "next/og";
 
-export const alt = `Online Code Compiler (Editor) - ${metadataConfig.title}`;
+const { title } = baseMetadata;
+
+export const alt = `Online Code Compiler (Editor) - ${title}`;
 
 export const size = {
     width: 1200,
     height: 630,
 };
-const LANGUAGES = Object.keys(LANGUAGES_CONFIG);
 
 export const contentType = "image/png";
-const { title } = metadataConfig;
 
 export default async function Image() {
     const inter = await getLocalFont();
@@ -64,7 +64,7 @@ export default async function Image() {
                         fontSize: 30,
                     }}
                 >
-                    {LANGUAGES.map((lang) => (
+                    {Object.keys(LANGUAGES_CONFIG).map((lang) => (
                         <div key={lang}>
                             {
                                 LANGUAGES_CONFIG[
