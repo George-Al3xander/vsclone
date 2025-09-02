@@ -1,4 +1,5 @@
-import { Dialogs } from "@/app/_components/dialogs";
+import { ExportCodeDialog } from "@/app/(export-code)";
+import { ImportCodeDialog } from "@/app/(import-code)";
 import { Header } from "@/app/_components/shared/Header";
 import { Providers } from "@/providers";
 import "@/styles/main.css";
@@ -13,7 +14,8 @@ export default function RootLayout({ children }: LayoutProps) {
         <html lang="en" className={`${inter.variable}`}>
             <body className="dark font-inter">
                 <Providers>
-                    <Dialogs />
+                    <ImportCodeDialog />
+                    <ExportCodeDialog />
                     <TemplateScaffold header={<Header />}>
                         {children}
                     </TemplateScaffold>

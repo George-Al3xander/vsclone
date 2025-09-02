@@ -1,6 +1,6 @@
-import { FileBlock } from "@/app/_components/menu/mobile/FileBlock";
-import { GitHubMenuItem } from "@/app/_components/menu/mobile/GitHubMenuItem";
-import { LanguagesBlock } from "@/app/_components/menu/mobile/LanguagesBlock";
+import { FileBlock } from "@/app/(mobile)/_components/FileBlock";
+import { GitHubMenuItem } from "@/app/(mobile)/_components/GitHubMenuItem";
+import { LanguagesBlock } from "@/app/(mobile)/_components/LanguagesBlock";
 import { Logo } from "@/app/_components/shared/Logo";
 import { Separator } from "@/ui/components/atoms/Separator";
 import { dropdownMenuSeparatorBaseStyles } from "@/ui/components/organisms/DropdownMenu";

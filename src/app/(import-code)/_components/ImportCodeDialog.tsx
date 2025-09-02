@@ -1,9 +1,9 @@
 "use client";
 
-import { ImportCodeForm } from "@/app/_components/forms/ImportCodeForm";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import { useDialogsActions, useIsImportOpen } from "@/store/dialogs-store";
 import { ResponsiveDialog } from "@/ui/components/organisms/ResponsiveDialog";
+import { ImportCodeForm } from "./ImportCodeForm";
 
 const acceptString = Object.values(LANGUAGES_CONFIG)
     .map(({ extension }) => extension)

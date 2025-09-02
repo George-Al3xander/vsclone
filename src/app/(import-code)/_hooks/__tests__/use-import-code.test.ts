@@ -1,4 +1,4 @@
-import { useImportsCode } from "@/app/_hooks/code/use-import-code";
+import { useImportsCode } from "@/app/(import-code)/_hooks/use-import-code";
 import { useCodeActions } from "@/store/code-store";
 import { useDialogsActions } from "@/store/dialogs-store";
 import { act, renderHook, waitFor } from "@testing-library/react";

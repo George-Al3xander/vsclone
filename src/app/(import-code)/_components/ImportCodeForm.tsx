@@ -1,8 +1,8 @@
 "use client";
 
-import { useImportsCode } from "@/app/_hooks/code/use-import-code";
 import { Button } from "@/ui/components/atoms/Button";
 import { Input } from "@/ui/components/atoms/Input";
+import { useImportsCode } from "../_hooks/use-import-code";
 
 export const ImportCodeForm = () => {
     const { handleFileChange, acceptString, importFile, isValid } =
