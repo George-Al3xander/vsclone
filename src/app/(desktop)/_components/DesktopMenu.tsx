@@ -1,4 +1,3 @@
-import { FileMenuItem } from "@/app/_components/menu/desktop/FileMenuItem";
 import { GitHubLinkBase } from "@/app/_components/shared/GitHubLinkBase";
 import { Button } from "@/ui/components/atoms/Button";
 import {
@@ -10,9 +9,10 @@ import {
     DropdownMenuTrigger,
 } from "@/ui/components/organisms/DropdownMenu";
 import { VscMenuIcon } from "@/ui/icons";
+import { FileMenuItem } from "./FileMenuItem";
 import { SettingsMenuItem } from "./SettingsMenuItem";
 
-export const MenuDesktop = () => {
+export const DesktopMenu = () => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>

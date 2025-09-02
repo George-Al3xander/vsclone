@@ -1,13 +1,13 @@
-import { MobileMenu } from "@/app/(mobile)/_components/MobileMenu";
+import { DesktopMenu } from "@/app/(desktop)";
+import { MobileMenu } from "@/app/(mobile)";
 import { ExecuteCodeButton } from "@/app/_components/editor/ExecuteCodeButton";
-import { MenuDesktop } from "@/app/_components/menu/desktop/MenuDesktop";
 import { Logo } from "./Logo";
 
 export const Header = () => (
     <>
         <Logo />
         <div className="ml-auto">
-            <MenuDesktop />
+            <DesktopMenu />
             <MobileMenu />
             <ExecuteCodeButton />
         </div>

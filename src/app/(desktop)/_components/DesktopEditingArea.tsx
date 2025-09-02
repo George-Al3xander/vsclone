@@ -5,10 +5,10 @@ import {
     useOutputPosition,
 } from "@/store/output-position-desktop-store";
 import { cn } from "@/utils/cn";
-import { Editor } from "./Editor";
-import { OutputPanel } from "./OutputPanel";
+import { Editor } from "../../_components/editor/Editor";
+import { OutputPanel } from "../../_components/editor/OutputPanel";
 
-export const EditingAreaDesktop = () => {
+export const DesktopEditingArea = () => {
     const outputPosition = useOutputPosition();
     const isOutputHidden = useIsOutputHidden();
     const isHorizontal = Boolean(

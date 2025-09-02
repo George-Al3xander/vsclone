@@ -1,5 +1,5 @@
-import { EditingAreaDesktop } from "@/app/_components/editor/EditingAreaDesktop";
 import { LanguageSelectionList } from "@/app/_components/shared/LanguageSelectionList";
+import { DesktopEditingArea } from "./DesktopEditingArea";
 
 export const DesktopView = () => {
     return (
@@ -7,7 +7,7 @@ export const DesktopView = () => {
             <nav className="roundedGlass">
                 <LanguageSelectionList />
             </nav>
-            <EditingAreaDesktop />
+            <DesktopEditingArea />
         </div>
     );
 };
