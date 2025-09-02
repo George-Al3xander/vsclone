@@ -3,7 +3,7 @@ import { mockExecuteCode } from "@/mocks/mock-internal-client";
 import * as internalApi from "@/services/api/internal";
 import { renderHook } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { useExecuteCode } from "../code/use-execute-code";
+import { useExecuteCode } from "../use-execute-code";
 
 const executeCodeSpy = vi.spyOn(internalApi.code, "execute");
 

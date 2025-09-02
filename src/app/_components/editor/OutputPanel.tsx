@@ -1,11 +1,11 @@
 "use client";
 
+import { ExecuteCodeButton } from "@/app/(execute-code)";
 import { useCompilingOutput } from "@/store/code-store";
 import { ScrollArea } from "@/ui/components/atoms/ScrollArea";
 import { cn } from "@/utils/cn";
 import { ComponentProps, FC, HTMLAttributes } from "react";
 import { ClearOutputButton } from "./ClearOutputButton";
-import { ExecuteCodeButton } from "./ExecuteCodeButton";
 
 type Props = {
     wrapperProps?: HTMLAttributes<HTMLDivElement>;

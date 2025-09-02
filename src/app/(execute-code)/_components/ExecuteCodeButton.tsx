@@ -1,9 +1,9 @@
 "use client";
 
-import { useExecuteCode } from "@/app/_hooks/code/use-execute-code";
 import { useMobileTabsActions } from "@/store/mobile-tabs-store";
 import { Button } from "@/ui/components/atoms/Button";
 import { VscLoadingIcon, VscPlayIcon } from "@/ui/icons";
+import { useExecuteCode } from "../_hooks/use-execute-code";
 
 export const ExecuteCodeButton = () => {
     const { executeCode: execCode, isCompiling } = useExecuteCode();

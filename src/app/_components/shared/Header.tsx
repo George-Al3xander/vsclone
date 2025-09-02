@@ -1,6 +1,6 @@
 import { DesktopMenu } from "@/app/(desktop)";
+import { ExecuteCodeButton } from "@/app/(execute-code)";
 import { MobileMenu } from "@/app/(mobile)";
-import { ExecuteCodeButton } from "@/app/_components/editor/ExecuteCodeButton";
 import { Logo } from "./Logo";
 
 export const Header = () => (
