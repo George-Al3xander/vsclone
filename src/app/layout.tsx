@@ -1,6 +1,9 @@
+import { DesktopMenu } from "@/app/(desktop)";
+import { ExecuteCodeButton } from "@/app/(execute-code)";
 import { ExportCodeDialog } from "@/app/(export-code)";
 import { ImportCodeDialog } from "@/app/(import-code)";
-import { Header } from "@/app/_components/shared/Header";
+import { MobileMenu } from "@/app/(mobile)";
+import { Logo } from "@/app/_components/shared/Logo";
 import { Providers } from "@/providers";
 import "@/styles/main.css";
 import { LayoutProps } from "@/types/app";
@@ -16,7 +19,18 @@ export default function RootLayout({ children }: LayoutProps) {
                 <Providers>
                     <ImportCodeDialog />
                     <ExportCodeDialog />
-                    <TemplateScaffold header={<Header />}>
+                    <TemplateScaffold
+                        header={
+                            <>
+                                <Logo />
+                                <div className="ml-auto">
+                                    <DesktopMenu />
+                                    <MobileMenu />
+                                    <ExecuteCodeButton />
+                                </div>
+                            </>
+                        }
+                    >
                         {children}
                     </TemplateScaffold>
                 </Providers>
