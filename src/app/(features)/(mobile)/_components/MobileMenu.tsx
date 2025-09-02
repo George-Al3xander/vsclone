@@ -1,4 +1,4 @@
-import { Logo } from "@/app/(common)";
+import { Logo } from "@/app/(features)/(common)";
 import { Separator } from "@/ui/components/atoms/Separator";
 import { dropdownMenuSeparatorBaseStyles } from "@/ui/components/organisms/DropdownMenu";
 import { SheetMenu } from "@/ui/components/organisms/SheetMenu";

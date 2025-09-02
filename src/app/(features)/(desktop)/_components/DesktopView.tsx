@@ -1,4 +1,4 @@
-import { LanguageSelectionList } from "@/app/(language)";
+import { LanguageSelectionList } from "@/app/(features)/(language)";
 import { DesktopEditingArea } from "./DesktopEditingArea";
 
 export const DesktopView = () => {

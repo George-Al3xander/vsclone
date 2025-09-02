@@ -1,6 +1,6 @@
 "use client";
 
-import { Editor, OutputPanel } from "@/app/(editor)";
+import { Editor, OutputPanel } from "@/app/(features)/(editor)";
 import {
     Tabs,
     TabsContent,

@@ -1,6 +1,6 @@
 "use client";
 
-import { ExecuteCodeButton } from "@/app/(execute-code)";
+import { ExecuteCodeButton } from "@/app/(features)/(execute-code)";
 import { useCompilingOutput } from "@/store/code-store";
 import { ScrollArea } from "@/ui/components/atoms/ScrollArea";
 import { cn } from "@/utils/cn";

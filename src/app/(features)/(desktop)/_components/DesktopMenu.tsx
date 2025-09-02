@@ -1,4 +1,4 @@
-import { GitHubLinkBase } from "@/app/(common)";
+import { GitHubLinkBase } from "@/app/(features)/(common)";
 import { Button } from "@/ui/components/atoms/Button";
 import {
     DropdownMenu,

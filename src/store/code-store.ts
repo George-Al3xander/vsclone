@@ -1,4 +1,4 @@
-import { useLanguageParam } from "@/app/(language)";
+import { useLanguageParam } from "@/app/(features)/(language)";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import codeSamples from "../../public/json/codeSamples.json";

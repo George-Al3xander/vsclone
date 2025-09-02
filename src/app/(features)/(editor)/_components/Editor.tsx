@@ -1,9 +1,9 @@
 "use client";
 
+import { useEditorProps } from "@/app/(features)/(editor)/_hooks/use-editor-props";
 import { cn } from "@/utils/cn";
 import EditorMonaco from "@monaco-editor/react";
 import { ComponentProps, FC, HTMLAttributes } from "react";
-import { useEditorProps } from "../_hooks/use-editor-props";
 
 type Props = {
     monacoEditorProps?: ComponentProps<typeof EditorMonaco>;
