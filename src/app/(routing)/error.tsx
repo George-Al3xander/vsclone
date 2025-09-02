@@ -31,7 +31,7 @@ const Error = ({
                         variant="ghost"
                         asChild
                     >
-                        <Link href="/">
+                        <Link href="/public">
                             <HomeIcon className="size-12" />
                             Return Home
                         </Link>
