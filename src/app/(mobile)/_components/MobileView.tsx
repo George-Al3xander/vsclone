@@ -2,7 +2,6 @@
 
 import { Editor } from "@/app/_components/editor/Editor";
 import { OutputPanel } from "@/app/_components/editor/OutputPanel";
-import { useMobileTabs } from "@/app/_hooks/use-mobile-tabs";
 import {
     Tabs,
     TabsContent,
@@ -10,6 +9,7 @@ import {
     TabsTrigger,
 } from "@/ui/components/organisms/Tabs";
 import React from "react";
+import { useMobileTabs } from "../_hooks/use-mobile-tabs";
 
 const menuTabs: {
     value: "editor" | "output";
