@@ -1,4 +1,4 @@
-import { ExportCodeDialog } from "./ExportCodeDialog";
+import { ExportCodeDialog } from "@/app/(export-code)";
 import { ImportCodeDialog } from "./ImportCodeDialog";
 
 export const Dialogs = () => (
