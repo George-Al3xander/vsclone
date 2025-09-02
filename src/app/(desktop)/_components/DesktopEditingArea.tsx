@@ -1,12 +1,11 @@
 "use client";
 
+import { Editor, OutputPanel } from "@/app/(editor)";
 import {
     useIsOutputHidden,
     useOutputPosition,
 } from "@/store/output-position-desktop-store";
 import { cn } from "@/utils/cn";
-import { Editor } from "../../_components/editor/Editor";
-import { OutputPanel } from "../../_components/editor/OutputPanel";
 
 export const DesktopEditingArea = () => {
     const outputPosition = useOutputPosition();

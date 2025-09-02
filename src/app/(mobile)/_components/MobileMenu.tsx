@@ -1,6 +1,3 @@
-import { FileBlock } from "@/app/(mobile)/_components/FileBlock";
-import { GitHubMenuItem } from "@/app/(mobile)/_components/GitHubMenuItem";
-import { LanguagesBlock } from "@/app/(mobile)/_components/LanguagesBlock";
 import { Logo } from "@/app/_components/shared/Logo";
 import { Separator } from "@/ui/components/atoms/Separator";
 import { dropdownMenuSeparatorBaseStyles } from "@/ui/components/organisms/DropdownMenu";
@@ -12,6 +9,9 @@ import {
     TabsTrigger,
 } from "@/ui/components/organisms/Tabs";
 import { VscMenuIcon } from "@/ui/icons";
+import { FileBlock } from "./FileBlock";
+import { GitHubMenuItem } from "./GitHubMenuItem";
+import { LanguagesBlock } from "./LanguagesBlock";
 
 export const MobileMenu = () => (
     <SheetMenu

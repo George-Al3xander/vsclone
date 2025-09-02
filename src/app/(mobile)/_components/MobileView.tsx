@@ -1,7 +1,6 @@
 "use client";
 
-import { Editor } from "@/app/_components/editor/Editor";
-import { OutputPanel } from "@/app/_components/editor/OutputPanel";
+import { Editor, OutputPanel } from "@/app/(editor)";
 import {
     Tabs,
     TabsContent,
