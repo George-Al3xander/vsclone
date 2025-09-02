@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguageParam } from "@/app/_hooks/language/use-language-param";
+import { useLanguageParam } from "@/app/(language)";
 import { useCode, useCodeActions } from "@/store/code-store";
 import { IconTextBlock } from "@/ui/components/molecules/IconTextBlock";
 import { AiFillCodeIcon } from "@/ui/icons";

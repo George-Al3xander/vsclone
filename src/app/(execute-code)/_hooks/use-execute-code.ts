@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguageParam } from "@/app/_hooks/language/use-language-param";
+import { useLanguageParam } from "@/app/(language)";
 import * as internalApi from "@/services/api/internal";
 import { useCode, useCodeActions, useIsCompiling } from "@/store/code-store";
 

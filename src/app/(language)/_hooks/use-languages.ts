@@ -1,4 +1,3 @@
-import { useLanguageParam } from "@/app/_hooks/language/use-language-param";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import {
     CppIcon,
@@ -10,6 +9,7 @@ import {
     TypeScriptIcon,
 } from "@/ui/icons";
 import { IconType } from "react-icons";
+import { useLanguageParam } from "./use-language-param";
 
 export const ICONS = {
     javascript: JavaScriptIcon,

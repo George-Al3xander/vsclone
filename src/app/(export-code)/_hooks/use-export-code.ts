@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguageParam } from "@/app/_hooks/language/use-language-param";
+import { useLanguageParam } from "@/app/(language)";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
 import { useCode } from "@/store/code-store";
 import { useDialogsActions } from "@/store/dialogs-store";

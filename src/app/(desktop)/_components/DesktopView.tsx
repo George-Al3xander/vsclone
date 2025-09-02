@@ -1,4 +1,4 @@
-import { LanguageSelectionList } from "@/app/_components/shared/LanguageSelectionList";
+import { LanguageSelectionList } from "@/app/(language)";
 import { DesktopEditingArea } from "./DesktopEditingArea";
 
 export const DesktopView = () => {
