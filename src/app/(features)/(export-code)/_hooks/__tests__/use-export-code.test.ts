@@ -1,9 +1,9 @@
+import codeSamples from "@/json/codeSamples.json";
 import { setIsExportOpen } from "@/mocks/mock-dialog-actions";
 import * as codeStore from "@/store/code-store";
 import * as exportFileRoot from "@/utils/export-text-file";
 import { act, renderHook } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import codeSamples from "../../../../../../public/json/codeSamples.json";
 import { useExportCode } from "../use-export-code";
 
 vi.spyOn(exportFileRoot, "exportTextFile").mockImplementation(() => true);

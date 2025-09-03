@@ -1,7 +1,7 @@
 import { useLanguageParam } from "@/app/(features)/(language)";
+import codeSamples from "@/json/codeSamples.json";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import codeSamples from "../../public/json/codeSamples.json";
 
 export type CodeActions = {
     setCode: (code: string) => void;

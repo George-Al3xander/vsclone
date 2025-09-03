@@ -2,12 +2,12 @@
 
 import { useLanguageParam } from "@/app/(features)/(language)";
 import { LANGUAGES_CONFIG } from "@/configs/languages";
+import codeSamples from "@/json/codeSamples.json";
 import { useCode } from "@/store/code-store";
 import { useDialogsActions } from "@/store/dialogs-store";
 import { exportTextFile } from "@/utils/export-text-file";
 import { ChangeEvent, useState } from "react";
 import { toast } from "sonner";
-import codeSamples from "../../../../../public/json/codeSamples.json";
 
 export const useExportCode = () => {
     const language = useLanguageParam();
