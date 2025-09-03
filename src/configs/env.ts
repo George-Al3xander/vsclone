@@ -7,9 +7,11 @@ export const env = createEnv({
     },
     client: {
         NEXT_PUBLIC_GITHUB_URL: z.string().url(),
+        NEXT_PUBLIC_BASE_URL: z.string().url(),
     },
     runtimeEnv: {
         NODE_ENV: process.env.NODE_ENV,
         NEXT_PUBLIC_GITHUB_URL: process.env.NEXT_PUBLIC_GITHUB_URL,
+        NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
     },
 });
